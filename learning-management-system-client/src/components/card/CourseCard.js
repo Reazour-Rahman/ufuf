@@ -109,6 +109,73 @@ const CardImageMobile = {
   ...mysteryActive,
 };
 
+
+
+//course card style start
+
+const CourseImage = {
+  width: "100%",
+  minHeight: "213px",
+  height: "100%",
+  borderRadius: "4px",
+  position: "relative",
+};
+
+const CategoryName = {
+  background: "#1EC902",
+  position: "absolute",
+  left: "20px",
+  top: "5px",
+  color: "white",
+  fontWeight: "600",
+  fontSize: "12px",
+  borderRadius: "2px",
+  padding: "5px 3px",
+};
+const CourseName = {
+  fontSize: "20px",
+  color: "black",
+  fontWeight: "600",
+  marginTop: "0px",
+};
+
+const StarColor = {
+  background: " rgba(0, 0, 0, 0.16)",
+  position: "absolute",
+  right: "20px",
+  top: "18px",
+  color: "white",
+  fontWeight: "600",
+  fontSize: "30px",
+  borderRadius: "2px",
+  padding: "5px 3px",
+};
+
+const CardContainerStyle = styled("section")(({ theme }) => ({
+  position: "relative",
+  width: "370px",
+  boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
+  margin: "0 auto",
+  minHeight: "420px",
+  borderRadius: "5px",
+  background: "#FFFFFF",
+}));
+
+const LineThroughStyle = styled("section")(({ theme }) => ({
+  textDecorationLine: "line-through",
+}));
+
+const CardDataContainerStyle = styled("section")(({ theme }) => ({
+  padding: "0px 22px",
+}));
+
+const FlexHandle = styled("section")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+}));
+
+//course card style finished
+
 const CourseCard = () => {
   const theme = useTheme();
   return (
@@ -149,285 +216,202 @@ const CourseCard = () => {
       </BannerContainerStyle>
 
       <div>
-        <div
-          className=" hover:scale-105  duration-300  relative rounded-lg  sm:w-[370px] w-full mx-auto min-h-[420px]  h-full "
-          style={{
-            position: "relative",
-            width: "370px",
-            boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
-            margin: "0 auto",
-            minHeight: "420px",
-            borderRadius: "5px",
-            background: "#FFFFFF",
-          }}
-        >
-          <div className="select-none  ">
+        <CardContainerStyle>
+          {" "}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 14px",
+            }}
+            className="flex items-center justify-center rounded-lg p-3 bg-[#EAECF0]"
+          >
+            <img
+              src={
+                "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              }
+              className=""
+              style={CourseImage}
+              alt=""
+            />
+
+            <p style={CategoryName} className="">
+              Trending Course
+            </p>
+
+            <AiOutlineHeart style={StarColor} />
+          </div>
+          <CardDataContainerStyle>
+            <FlexHandle>
+              <FlexHandle
+                sx={{
+                  marginRight: "100px",
+                }}
+              >
+                <FaBook
+                  style={{
+                    color: "#5F2DED",
+                    fontSize: "18px",
+                  }}
+                />
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    marginLeft: "5px",
+                    color: "#53545B",
+                  }}
+                  className="text-[16px] font-[600] mt-1"
+                >
+                  21 lessons
+                </p>
+              </FlexHandle>
+              <FlexHandle>
+                <BsStopwatch
+                  style={{
+                    color: "#5F2DED",
+                    fontSize: "18px",
+                  }}
+                />
+                <p
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    marginLeft: "5px",
+                    color: "#53545B",
+                  }}
+                  className="text-[16px] font-[600] mt-1"
+                >
+                  1hr 30 min
+                </p>
+              </FlexHandle>
+            </FlexHandle>
+
+            <h1 style={CourseName}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            </h1>
+
+            <FlexHandle
+              sx={{
+                fontSize: "18px",
+                color: "#5F2DED",
+                fontWeight: "600",
+              }}
+            >
+              $32.00{" "}
+              <span
+                style={{
+                  color: "#C4C4C4",
+                }}
+              >
+                /
+              </span>
+              <LineThroughStyle
+                sx={{
+                  color: "#C4C4C4",
+                  fontSize: "16px",
+                }}
+              >
+                $67.00
+              </LineThroughStyle>
+              <LineThroughStyle
+                sx={{
+                  color: "red",
+                  marginLeft: "20px",
+                }}
+              >
+                Free
+              </LineThroughStyle>
+            </FlexHandle>
+
+            <hr />
+
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                // justifyContent:'center',
-                // background: "#EAECF0",
-                padding: "10px 14px",
+                justifyContent: "space-between",
               }}
-              className="flex items-center justify-center rounded-lg p-3 bg-[#EAECF0]"
-            >
-              <img
-                src={
-                  "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-                }
-                className=""
-                style={{
-                  width: "100%",
-                  minHeight: "213px",
-                  height: "100%",
-                  borderRadius: "4px",
-                  position: "relative",
-                }}
-                alt=""
-              />
-
-              {/* <StarFilled /> */}
-              <p
-                style={{
-                  background: "#1EC902",
-                  // background:
-                  //   "linear-gradient(90.18deg, #7D23E0 -38.65%, #009EF7 62.68%)",
-                  position: "absolute",
-                  left: "20px",
-                  top: "5px",
-                  color: "white",
-
-                  fontWeight: "600",
-                  fontSize: "12px",
-                  borderRadius: "2px",
-                  padding: "5px 3px",
-                }}
-                className=""
-              >
-                Trending Course
-              </p>
-
-              {/* <StarFilled /> */}
-              <AiOutlineHeart
-                style={{
-                  background: " rgba(0, 0, 0, 0.16)",
-                  // background:
-                  //   "linear-gradient(90.18deg, #7D23E0 -38.65%, #009EF7 62.68%)",
-                  position: "absolute",
-                  right: "20px",
-                  top: "18px",
-                  color: "white",
-
-                  fontWeight: "600",
-                  fontSize: "30px",
-                  borderRadius: "2px",
-                  padding: "5px 3px",
-                }}
-              />
-            </div>
-
-            <div
-              style={{
-                padding: "0px 22px",
-              }}
-              className="p-4 "
+              className="flex justify-between items-center  "
             >
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  marginRight: "30px",
                 }}
-                className="flex justify-between items-center  "
               >
-                {/* <Link prefetch={false} href={slugUrl}> */}
                 <div
                   style={{
+                    width: "35px",
                     display: "flex",
                     alignItems: "center",
-                    marginRight: "30px",
+                    justifyContent: "center",
+                    height: "35px",
+                    borderRadius: "100%",
+                    background: "#FFFFFF",
+                    boxShadow: "0px 4px 13px rgba(0, 0, 0, 0.08)",
                   }}
                 >
-                  <FaBook
+                  <img
+                    src={
+                      "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+                    }
+                    className=""
                     style={{
-                      color: "#5F2DED",
-                      fontSize: "18px",
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      marginLeft: "5px",
-                      color: "#53545B",
-                    }}
-                    className="text-[16px] font-[600] mt-1"
-                  >
-                    21 lessons
-                  </p>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <BsStopwatch
-                    style={{
-                      color: "#5F2DED",
-                      fontSize: "18px",
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      marginLeft: "5px",
-                      color: "#53545B",
-                    }}
-                    className="text-[16px] font-[600] mt-1"
-                  >
-                    1hr 30 min
-                  </p>
-                </div>
-              </div>
+                      width: "30px",
 
-              <p
-                style={{
-                  fontSize: "20px",
-                  color: "black",
-                  fontWeight: "600",
-                  // lineHeight: "27px",
-                }}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis
-              </p>
-
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#5F2DED",
-                  fontWeight: "600",
-                  // lineHeight: "27px",
-                }}
-                className="text-[14px] my-1"
-              >
-                $32.00{" "}
-                <span
-                  style={{
-                    color: "#C4C4C4",
-
-                    fontSize: "16px",
-                  }}
-                >
-                  /{" "}
-                  <span
-                    style={{
-                      textDecorationLine: "line-through",
-                    }}
-                  >
-                    $67.00
-                  </span>
-                </span>{" "}
-                <span
-                  style={{
-                    color: "red",
-                    marginLeft: "20px",
-                    textDecorationLine: "line-through",
-                  }}
-                >
-                  Free
-                </span>
-              </p>
-
-              <hr />
-
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-                className="flex justify-between items-center  "
-              >
-                {/* <Link prefetch={false} href={slugUrl}> */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginRight: "30px",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "35px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      height: "35px",
+                      height: "30px",
                       borderRadius: "100%",
-                      background: "#FFFFFF",
-                      boxShadow: "0px 4px 13px rgba(0, 0, 0, 0.08)",
                     }}
-                  >
-                    <img
-                      src={
-                        "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-                      }
-                      className=""
-                      style={{
-                        width: "30px",
-
-                        height: "30px",
-                        borderRadius: "100%",
-                      }}
-                      alt=""
-                    />
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      fontWeight: "500",
-                      marginLeft: "5px",
-                      color: "#53545B",
-                    }}
-                    className="text-[16px] font-[600] mt-1"
-                  >
-                    Mehedii .H
-                  </p>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-
-                    alignItems: "center",
-                  }}
-                  className="text-gray text-[14px] flex items-center"
-                >
-                  <Rating
-                    className={`mr-2`}
-                    name="read-only"
-                    value={5}
-                    size="small"
-                    readOnly
+                    alt=""
                   />
-                  <p
-                    style={{
-                      marginLeft: "5px",
-                      fontWeight: "600",
-                      fontSize: "15px",
-                      color: "#6D6E75",
-                    }}
-                    className={`text-[#faaf00]  font-semibold mr-1`}
-                  >
-                    (2)
-                  </p>
                 </div>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    marginLeft: "5px",
+                    color: "#53545B",
+                  }}
+                  className="text-[16px] font-[600] mt-1"
+                >
+                  Mehedii .H
+                </p>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+
+                  alignItems: "center",
+                }}
+                className="text-gray text-[14px] flex items-center"
+              >
+                <Rating
+                  className={`mr-2`}
+                  name="read-only"
+                  value={5}
+                  size="small"
+                  readOnly
+                />
+                <p
+                  style={{
+                    marginLeft: "5px",
+                    fontWeight: "600",
+                    fontSize: "15px",
+                    color: "#6D6E75",
+                  }}
+                  className={`text-[#faaf00]  font-semibold mr-1`}
+                >
+                  (2)
+                </p>
               </div>
             </div>
-          </div>
-        </div>
+          </CardDataContainerStyle>
+        </CardContainerStyle>
+
+
+        <p>Lorem50</p>
       </div>
     </>
   );

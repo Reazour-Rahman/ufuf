@@ -1,5 +1,9 @@
 import React from "react";
 import CourseCard from "../../components/card/CourseCard";
+import SliderCard from "../../components/card/SliderCard";
+import Learning from "./Learning/Learning";
+import TabsSection from "./TabsSection/TabsSection";
+import Testimonial from "./Testimonial/Testimonial";
 
 const About = () => {
   return (
@@ -10,6 +14,11 @@ const About = () => {
         blanditiis. Voluptatibus laborum ad, corrupti aliquam eaque, commodi
         animi eligendi earum neque, reprehenderit maiores.
       </p>
+      <CourseCard />
+      <SliderCard />
+      <Learning />
+      <Testimonial />
+      <TabsSection />
       <CourseCard />
     </div>
   );
