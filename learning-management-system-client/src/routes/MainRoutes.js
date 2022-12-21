@@ -6,6 +6,7 @@ import MainLayout from '../layout/mainLayout/MainLayout'
 
 // render - dashboard
 const Home = Loadable(lazy(() => import('../pages/home/index.js')));
+const About = Loadable(lazy(() => import('../pages/about/index.js')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -16,6 +17,10 @@ const MainRoutes = {
         {
             path: '/',
             element: <Home />
+        },
+        {
+            path: '/about',
+            element: <About />
         }
     ],
 };
