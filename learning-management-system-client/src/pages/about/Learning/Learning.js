@@ -37,9 +37,9 @@ const AutoContainer = styled("div")(({ theme }) => ({
 const H1 = styled("h1")(({ theme }) => ({
   marginBottom: "28px",
   color: "black",
-  fontSize: "45px",
-  lineHeight: "58px",
-  fontWeight: "700",
+  // fontSize: "45px",
+  // lineHeight: "58px",
+  // fontWeight: "700",
 }));
 const PlayIcon = {
   padding: "40px",
@@ -59,7 +59,7 @@ const Lay = styled("div")(({ theme }) => ({
   margin: "35px 0px",
 }));
 const PTag = styled("p")(({ theme }) => ({
-  color: "#68666C",
+  color: theme.palette.text.primary,
   fontSize: "16px",
 }));
 
@@ -139,27 +139,35 @@ const Learning = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <AboutUsStylingButton>About Us</AboutUsStylingButton>
-              <H1>Welcome To The Online Learning Center</H1>
-              <PTag>
-                The most flexible way of combine practice and analyzing startup
-                projects to maximize its effectiveness.
-              </PTag>
+              <Typography
+                variant="h1"
+                sx={{
+                  color: theme.palette.common.black,
+                }}
+              >
+                অনলাইন শিক্ষা কেন্দ্রে স্বাগতম
+              </Typography>
+              <Typography variant="soft">
+                স্টার্টআপ প্রকল্পগুলির কার্যকারিতা সর্বাধিক করার জন্য অনুশীলন
+                এবং বিশ্লেষণ একত্রিত করার সবচেয়ে নমনীয় উপায়।
+              </Typography>
               <Lay>
                 <IconButton style={{ ...PlayIcon }} aria-label="play">
                   <PlayCircleOutlined />
                 </IconButton>
-                <PTag>
-                  <strong>10 Years Experience </strong> In this game, Means{" "}
-                  <br /> Product Designing
-                </PTag>
+                <Typography variant="soft">
+                  <strong>এই গেমটিতে 10 বছরের অভিজ্ঞতা, </strong> <br /> মানে
+                  পণ্য ডিজাইনিং
+                </Typography>
               </Lay>
-              <PTag>
-                I love to work in User Experience & User Interface designing.
-                Because I love to solve the design problem and find easy and
-                better solutions to solve it. I always try my best to make good
-                user interface with the best user experience. I have been
-                working as a UX Designer
-              </PTag>
+              <Typography variant="soft">
+                আমি ইউজার এক্সপেরিয়েন্স এবং ইউজার ইন্টারফেস ডিজাইনিং এ কাজ করতে
+                ভালোবাসি। কারণ আমি ডিজাইনের সমস্যা সমাধান করতে এবং এটি সমাধানের
+                জন্য সহজ এবং আরও ভাল সমাধান খুঁজে পেতে পছন্দ করি। আমি সর্বদা
+                সর্বোত্তম ব্যবহারকারীর অভিজ্ঞতার সাথে ভাল ইউজার ইন্টারফেস তৈরি
+                করার জন্য যথাসাধ্য চেষ্টা করি। আমি একজন ইউএক্স ডিজাইনার হিসেবে
+                কাজ করছি
+              </Typography>
 
               <MoreAboutButton>
                 More About <BsArrowRight />
