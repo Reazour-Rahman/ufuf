@@ -1,24 +1,22 @@
 import React from "react";
+import TopHeader from "../../components/Breadcrumbs/TopHeader";
 import CourseCard from "../../components/card/CourseCard";
 import SliderCard from "../../components/card/SliderCard";
 import Learning from "./Learning/Learning";
+import Marketers from "./Marketers/Marketers";
 import TabsSection from "./TabsSection/TabsSection";
 import Testimonial from "./Testimonial/Testimonial";
 
 const About = () => {
   return (
     <div>
-      <p>
-        ravi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-        necessitatibus aliquid accusantium vitae ratione dolor aliquam
-        blanditiis. Voluptatibus laborum ad, corrupti aliquam eaque, commodi
-        animi eligendi earum neque, reprehenderit maiores.
-      </p>
+      <TopHeader />
       <CourseCard />
       <SliderCard />
       <Learning />
-      <Testimonial />
       <TabsSection />
+      <Testimonial />
+      <Marketers />
       <CourseCard />
     </div>
   );
