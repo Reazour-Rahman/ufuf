@@ -148,7 +148,7 @@ const Typography = (fontFamily) => ({
             fontSize: '1.7rem'
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '1.5rem'
+            fontSize: '16px'
         }
     },
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material/';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 // import LogoSection from 'components/Logo/index';
 import { TwitterCircleFilled } from '@ant-design/icons';
