@@ -19,9 +19,9 @@ const AutoContainer = styled("div")(({ theme }) => ({
   width: "1280px",
   margin: "0 auto",
   padding: {
-    md: "135px 0px",
-    sm: "115px 0px",
-    xs: "100px 0px",
+    md: "35px 0px",
+    sm: "25px 0px",
+    xs: "10px 0px",
   },
 }));
 

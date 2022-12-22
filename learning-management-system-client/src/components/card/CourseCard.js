@@ -109,8 +109,6 @@ const CardImageMobile = {
   ...mysteryActive,
 };
 
-
-
 //course card style start
 
 const CourseImage = {
@@ -180,7 +178,7 @@ const CourseCard = () => {
   const theme = useTheme();
   return (
     <>
-      <BannerContainerStyle sx={{ ...BannerPadding }}>
+      {/* <BannerContainerStyle sx={{ ...BannerPadding }}>
         <LayerOuter sx={{ ...mystery }}>
           <LayerImage></LayerImage>
         </LayerOuter>
@@ -213,7 +211,7 @@ const CourseCard = () => {
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}></Grid>
           </Grid>
         </AutoContainer>
-      </BannerContainerStyle>
+      </BannerContainerStyle> */}
 
       <div>
         <CardContainerStyle>
@@ -409,9 +407,6 @@ const CourseCard = () => {
             </div>
           </CardDataContainerStyle>
         </CardContainerStyle>
-
-
-        <p>Lorem50</p>
       </div>
     </>
   );

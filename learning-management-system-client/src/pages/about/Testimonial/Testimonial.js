@@ -12,6 +12,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 import CardMedia from "@mui/material/CardMedia";
 import SliderCard from "../../../components/card/SliderCard";
+import Carousel from "react-elastic-carousel";
 
 const BannerContainerStyle = styled("section")(({ theme }) => ({
   //   backgroundColor: "#320fa1",
@@ -117,7 +118,43 @@ const AboutUsStylingButton = styled("div")(({ theme }) => ({
   fontWeight: 600,
 }));
 
+const data = [
+  {
+    name: "name",
+    data: "ravo",
+  },
+  {
+    name: "name",
+    data: "ravo",
+  },
+  {
+    name: "name",
+    data: "ravo",
+  },
+  {
+    name: "name",
+    data: "ravo",
+  },
+  {
+    name: "name",
+    data: "ravo",
+  },
+];
+
+const items = [
+  { id: 1, title: "item #1" },
+  { id: 2, title: "item #2" },
+  { id: 3, title: "item #3" },
+  { id: 4, title: "item #4" },
+  { id: 5, title: "item #5" },
+];
+
 const Testimonial = () => {
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 3 },
+  ];
   const theme = useTheme();
   return (
     <>
@@ -138,7 +175,24 @@ const Testimonial = () => {
             Client Testimonial
           </H1>
 
-          <SliderCard />
+          {/* <SliderCard /> */}
+
+          <Carousel
+            breakPoints={[
+              { width: 400, itemsToShow: 1 },
+              { width: 600, itemsToShow: 1 },
+              { width: 900, itemsToShow: 2 },
+            ]}
+            itemsToShow={4}
+            showArrows={true}
+            enableAutoPlay={false}
+            autoPlaySpeed={3000}
+            pagination={false}
+          >
+            {items.map((item) => (
+              <SliderCard />
+            ))}
+          </Carousel>
         </AutoContainer>
       </BannerContainerStyle>
     </>

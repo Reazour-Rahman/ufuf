@@ -10,7 +10,14 @@ import { BsArrowRight, BsStopwatch } from "react-icons/bs";
 import { FaShare } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 
-import CardMedia from "@mui/material/CardMedia";
+import marketer1 from "../../../assets/Pages/About/marketers/image(1).png";
+import marketer2 from "../../../assets/Pages/About/marketers/image(2).png";
+import marketer3 from "../../../assets/Pages/About/marketers/image(3).png";
+import marketer4 from "../../../assets/Pages/About/marketers/image(4).png";
+import marketer5 from "../../../assets/Pages/About/marketers/image(5).png";
+import marketer6 from "../../../assets/Pages/About/marketers/image(6).png";
+import marketer7 from "../../../assets/Pages/About/marketers/image(7).png";
+import marketer8 from "../../../assets/Pages/About/marketers/image(8).png";
 
 const BannerContainerStyle = styled("section")(({ theme }) => ({
   //   backgroundColor: "#320fa1",
@@ -21,16 +28,16 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 }));
 const BannerPadding = {
   padding: {
-    md: "135px 0px",
-    sm: "115px 0px",
-    xs: "100px 0px",
+    md: "35px 0px",
+    sm: "25px 0px",
+    xs: "10px 0px",
   },
 };
 
 const AutoContainer = styled("div")(({ theme }) => ({
   position: "static",
   maxWidth: "90%",
-  width: "1280px",
+  width: "1080px",
   margin: "0 auto",
 }));
 const H1 = styled("h1")(({ theme }) => ({
@@ -133,6 +140,78 @@ const Marketers = () => {
         >
           Relied on marketers trusted by engineers and beloved by executives
         </H1>
+
+        <Grid
+          container
+          spacing={8}
+          rowSpacing={8}
+          sx={{ mt: { xs: 2, sm: 5 } }}
+        >
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer1}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer2}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer3}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer4}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer5}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer6}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer7}
+            />
+          </Grid>
+          <Grid item xs={6} lg={3}>
+            <img
+              style={{
+                width: "100%",
+              }}
+              src={marketer8}
+            />
+          </Grid>
+        </Grid>
       </AutoContainer>
     </BannerContainerStyle>
   );

@@ -11,6 +11,7 @@ import { FaShare } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import CardMedia from "@mui/material/CardMedia";
 import LearningImage from "../../../assets/Pages/About/learningCenter.png";
+import CourseCard from "../../../components/card/CourseCard";
 
 const BannerContainerStyle = styled("section")(({ theme }) => ({
   //   backgroundColor: "#320fa1",
@@ -21,9 +22,9 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 }));
 const BannerPadding = {
   padding: {
-    md: "45px 0 0px",
-    sm: "35px 0 0px",
-    xs: "20px 0 0px",
+    md: "40px 0 0px",
+    sm: "20px 0 0px",
+    xs: "10px 0 0px",
   },
 };
 
@@ -117,7 +118,7 @@ const AboutUsStylingButton = styled("div")(({ theme }) => ({
   fontWeight: 600,
 }));
 
-const Learning = () => {
+const CourseSection = () => {
   const theme = useTheme();
   return (
     <>
@@ -129,42 +130,11 @@ const Learning = () => {
             rowSpacing={8}
             // sx={{ pb: { xs: 8, sm: 20 } }}
           >
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <img
-                style={{
-                  width: "100%",
-                }}
-                src={LearningImage}
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <AboutUsStylingButton>About Us</AboutUsStylingButton>
-              <H1>Welcome To The Online Learning Center</H1>
-              <PTag>
-                The most flexible way of combine practice and analyzing startup
-                projects to maximize its effectiveness.
-              </PTag>
-              <Lay>
-                <IconButton style={{ ...PlayIcon }} aria-label="play">
-                  <PlayCircleOutlined />
-                </IconButton>
-                <PTag>
-                  <strong>10 Years Experience </strong> In this game, Means{" "}
-                  <br /> Product Designing
-                </PTag>
-              </Lay>
-              <PTag>
-                I love to work in User Experience & User Interface designing.
-                Because I love to solve the design problem and find easy and
-                better solutions to solve it. I always try my best to make good
-                user interface with the best user experience. I have been
-                working as a UX Designer
-              </PTag>
-
-              <MoreAboutButton>
-                More About <BsArrowRight />
-              </MoreAboutButton>
-            </Grid>
+            {[1, 2, 3].map((item, i) => (
+              <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
+                <CourseCard />
+              </Grid>
+            ))}
           </Grid>
         </AutoContainer>
       </BannerContainerStyle>
@@ -172,4 +142,4 @@ const Learning = () => {
   );
 };
 
-export default Learning;
+export default CourseSection;

@@ -140,10 +140,13 @@ const DescriptionStyle = {
 };
 
 const CardContainerStyle = styled("section")(({ theme }) => ({
-  position: "relative",
-  width: "570px",
-  boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
-  margin: "0 auto",
+  width: {
+    lg: "570px",
+    md: "500px",
+    sm: "100%",
+  },
+  // boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
+  // margin: "0 auto",
   minHeight: "300px",
   borderRadius: "8px",
   background: "#FFFFFF",
@@ -169,7 +172,11 @@ const SliderCard = () => {
   const theme = useTheme();
   return (
     <>
-      <div>
+      <div
+        style={{
+          margin: "0px 10px",
+        }}
+      >
         <CardContainerStyle>
           {" "}
           <FlexHandle
