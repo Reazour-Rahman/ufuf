@@ -85,7 +85,22 @@ const Theme = (colors) => {
             darker: green[9],
             contrastText
         },
-        grey: greyColors
+        grey: greyColors,
+        pink: {
+            main : '#F2277E',
+            light : '#f5569b',
+            hard : '#d90d65',
+        },
+        purple: {
+            main : '#5F2DED',
+            light : '#835bf1',
+            hard : '#4612d3',
+        },
+        munsell: {
+            main : '#F60840',
+            light : '#f93966',
+            hard : '#c60633',
+        }
     };
 };
 
