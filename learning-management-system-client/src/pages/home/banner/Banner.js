@@ -4,7 +4,6 @@ import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
 import { styled } from "@mui/material/styles";
 import bannerImg from "../../../assets/Hero_area.png";
-import CardMedia from "@mui/material/CardMedia";
 import Boundary from "../../../components/Boundary";
 
 const BannerContainerStyle = styled("section")(({ theme }) => ({
@@ -39,7 +38,7 @@ const Banner = () => {
 
   const caption = {
     color: theme.palette.background.defaultMunsell,
-    marginBottom:"16px",
+    marginBottom: "16px",
   };
   const lay = {
     display: "flex",
@@ -63,23 +62,29 @@ const Banner = () => {
       xs: "center",
     },
   };
-  const parentGrid ={
-    display:"flex", alignItems:"center", py: {md: 7, sm: 3, xs: 7}
-  }
+  const parentGrid = {
+    display: "flex",
+    alignItems: "center",
+    py: { md: 7, sm: 3, xs: 7 },
+  };
   return (
+    <Box sx={{mt: 11}}>
     <BannerContainerStyle sx={{ ...mystery }}>
       <Boundary>
-        <Grid container spacing={2} sx={{...parentGrid}}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{...media}}>
+        <Grid container spacing={2} sx={{ ...parentGrid }}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ ...media }}>
             <Typography variant="subtitle1" sx={{ ...caption }}>
               স্কিলের সমাধান
             </Typography>
-            <Typography variant="h1" sx={{ color: short.common.white,marginBottom:"16px" }}>
+            <Typography
+              variant="h1"
+              sx={{ color: short.common.white, marginBottom: "16px" }}
+            >
               Biddaloi একাডেমিক প্রোগ্রাম <br /> SSC-HSC’ র A+ প্রস্তুতি এখানেই
             </Typography>
             <Typography
               variant="light"
-              sx={{ color: theme.palette.common.white, marginBottom:"16px" }}
+              sx={{ color: theme.palette.common.white, marginBottom: "16px" }}
             >
               নবম থেকে দ্বাদশ শ্রেণি পর্যন্ত শিক্ষার্থীদের সারাবছর <br />
               পড়ালেখার কমপ্লিট সল্যুশন
@@ -90,7 +95,7 @@ const Banner = () => {
               <PurpleButton>জনপ্রিয় কোর্স সমূহ</PurpleButton>
             </Box>
           </Grid>
-          <Grid item  xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <img
               src="https://res.cloudinary.com/cross-border-education-technologies-pte-ltd/image/upload/q_auto/c_scale,w_717/v1671372534/voqfh9ytswfrohzzjxje.png"
               alt="hero"
@@ -100,6 +105,7 @@ const Banner = () => {
         </Grid>
       </Boundary>
     </BannerContainerStyle>
+    </Box>
   );
 };
 
