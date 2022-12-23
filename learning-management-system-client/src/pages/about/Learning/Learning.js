@@ -21,9 +21,8 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 }));
 const BannerPadding = {
   padding: {
-    md: "45px 0 0px",
-    sm: "35px 0 0px",
-    xs: "20px 0 0px",
+    md: "50px  0px",
+    xs: "20px  0px",
   },
 };
 
