@@ -7,11 +7,12 @@ import { ButtonBase } from '@mui/material';
 // project import
 import Logo from './Logo';
 
-// =============|| MAIN LOGO ||============ //
+
+// ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = ({ sx, to }) => (
     <ButtonBase disableRipple component={Link} to="/" sx={sx}>
-        <Logo />
+        {/* <Logo /> */}
     </ButtonBase>
 );
 
