@@ -1,7 +1,7 @@
 import { Button, Typography, useTheme } from "@mui/material";
 import React from "react";
 
-const PurpleButton = ({ children }) => {
+const PurpleButton = ({ children, wdt }) => {
   const theme = useTheme();
 
   /* Style */
@@ -12,7 +12,9 @@ const PurpleButton = ({ children }) => {
     },
     color: "white",
     padding: "12px 24px",
-    borderRadius:"15px"
+    borderRadius: "15px",
+    width: wdt === undefined ? "auto" : wdt,
+    boxShadow: 1
   };
 
   return (
