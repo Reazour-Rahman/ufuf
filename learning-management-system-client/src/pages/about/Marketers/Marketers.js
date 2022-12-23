@@ -28,9 +28,8 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 }));
 const BannerPadding = {
   padding: {
-    md: "35px 0px",
-    sm: "25px 0px",
-    xs: "10px 0px",
+    md: "50px  0px",
+    xs: "20px  0px",
   },
 };
 
@@ -128,7 +127,8 @@ const Marketers = () => {
   return (
     <BannerContainerStyle sx={{ ...BannerPadding }}>
       <AutoContainer>
-        <H1
+        <Typography
+          variant="h2"
           sx={{
             textAlign: "center",
             width: {
@@ -136,10 +136,11 @@ const Marketers = () => {
               xs: "90%",
             },
             margin: "0 auto",
+            color: theme.palette.common.black,
           }}
         >
           Relied on marketers trusted by engineers and beloved by executives
-        </H1>
+        </Typography>
 
         <Grid
           container

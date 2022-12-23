@@ -23,9 +23,8 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 }));
 const BannerPadding = {
   padding: {
-    md: "135px 0px",
-    sm: "115px 0px",
-    xs: "100px 0px",
+    md: "50px  0px",
+    xs: "20px  0px",
   },
 };
 
@@ -167,13 +166,17 @@ const Testimonial = () => {
           >
             Course List
           </AboutUsStylingButton>
-          <H1
+
+          <Typography
             sx={{
               textAlign: "center",
+              color: theme.palette.common.black,
+              marginBottom: "20px",
             }}
+            variant="h1"
           >
             Client Testimonial
-          </H1>
+          </Typography>
 
           {/* <SliderCard /> */}
 

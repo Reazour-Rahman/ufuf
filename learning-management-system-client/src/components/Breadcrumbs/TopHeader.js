@@ -17,9 +17,8 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 
 const BannerPadding = {
   padding: {
-    md: "80px  0px",
-    sm: "40px  0px",
-    xs: "30px  0px",
+    md: "50px  0px",
+    xs: "20px  0px",
   },
 };
 
@@ -52,7 +51,9 @@ const TopHeader = () => {
   return (
     <BannerContainerStyle sx={{ ...BannerPadding }}>
       <AutoContainer>
-        <H1 sx={Align}>About</H1>
+        <Typography variant="h1" sx={Align}>
+          About
+        </Typography>
         <Breadcrumbs sx={FlexHandle} aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="/">
             MUI
