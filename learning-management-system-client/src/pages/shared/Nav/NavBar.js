@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
+import LogoSection from "../../../components/logo";
 import MobileNav from "./MobileNav";
 
 const NavBar = () => {
@@ -37,18 +38,19 @@ const NavBar = () => {
   const mysteryMobile = {
     display: {
       md: "none",
-      sm: "block",
-      xs: "block",
+      sm: "flex",
+      xs: "flex",
     },
+    alignItems:"center",
+    justifyContent:"space-between",
+    px: 2.5
   };
   return (
     <>
       <Box sx={{ ...mysteryDekstop }}>
         <Grid container>
           <Grid item md={4} sx={{ ...lay }}>
-            <Typography variant="h3" sx={{ lineHeight: 0 }}>
-              LOGO HERE
-            </Typography>
+            <LogoSection/>
           </Grid>
           <Grid item md={4} sx={{ ...lay }}>
             {navItems.map((item, index) => (
@@ -58,13 +60,14 @@ const NavBar = () => {
             ))}
           </Grid>
           <Grid item md={4} sx={{ ...lay, gap: 2 }}>
-            <PinkButton>Sign In</PinkButton>
-            <PurpleButton>Get Started Free</PurpleButton>
+            <PinkButton>সাইন ইন</PinkButton>
+            <PurpleButton>ফ্রি শুরু করুন</PurpleButton>
           </Grid>
         </Grid>
       </Box>
 
-      <Box sx={{ ...mysteryMobile }}>
+      <Box sx={{ ...mysteryMobile, ...container }}>
+        <LogoSection/>
         <MobileNav />
       </Box>
     </>
