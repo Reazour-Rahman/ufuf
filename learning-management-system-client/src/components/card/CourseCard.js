@@ -123,10 +123,10 @@ const CategoryName = {
   background: "#1EC902",
   position: "absolute",
   left: "20px",
-  top: "5px",
+  top: "15px",
   color: "white",
-  fontWeight: "600",
-  fontSize: "12px",
+  // fontWeight: "600",
+  // fontSize: "12px",
   borderRadius: "2px",
   padding: "5px 3px",
 };
@@ -233,9 +233,9 @@ const CourseCard = () => {
               alt=""
             />
 
-            <p style={CategoryName} className="">
+            <Typography sx={CategoryName} variant="body1">
               Trending Course
-            </p>
+            </Typography>
 
             <AiOutlineHeart style={StarColor} />
           </div>
@@ -278,22 +278,27 @@ const CourseCard = () => {
                     marginLeft: "5px",
                     color: "#53545B",
                   }}
-                  className="text-[16px] font-[600] mt-1"
                 >
                   1hr 30 min
                 </p>
               </FlexHandle>
             </FlexHandle>
 
-            <h1 style={CourseName}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            </h1>
+            <Typography
+              variant="h3"
+              sx={{
+                color: theme.palette.common.black,
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur
+            </Typography>
 
             <FlexHandle
               sx={{
                 fontSize: "18px",
                 color: "#5F2DED",
                 fontWeight: "600",
+                marginTop: "10px",
               }}
             >
               $32.00{" "}

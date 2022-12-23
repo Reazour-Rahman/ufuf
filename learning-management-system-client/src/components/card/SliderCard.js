@@ -120,22 +120,15 @@ const CliendImage = {
 
 const ClientName = {
   color: "#08151F",
-  fontWeight: "600",
-  fontSize: "20px",
   marginBottom: "0px",
 };
 
 const ClientProfession = {
   color: "#9F98B3",
-  fontWeight: "500",
-  fontSize: "14px",
   marginTop: "0px",
 };
 
 const DescriptionStyle = {
-  fontWeight: 400,
-  fontSize: "16px",
-  lineHeight: "32px",
   color: "rgba(20, 33, 43, 0.7)",
 };
 
@@ -195,12 +188,12 @@ const SliderCard = () => {
               />
 
               <div>
-                <p style={ClientName} className="">
+                <Typography sx={ClientName} variant="h3">
                   Trending Course
-                </p>
-                <p style={ClientProfession} className="">
-                  TIi/Ux Designer
-                </p>
+                </Typography>
+                <Typography sx={ClientProfession} variant="h6">
+                  Ui/Ux Designer
+                </Typography>
               </div>
             </FlexHandle>
 
@@ -212,12 +205,18 @@ const SliderCard = () => {
               readOnly
             />
           </FlexHandle>
-          <p style={DescriptionStyle}>
-            Mehedii Hassan Ui/Ux Designer The other hand we denounce with
-            righteou indg ation men who are so beguiled and demoraliz ed by the
-            of the mo ment.Dislike men who are so beguiled and dems ed by the
-            charms of pleas ure of the moment. Lorem
-          </p>
+          <Box
+            sx={{
+              marginTop: "20px",
+            }}
+          >
+            <Typography variant="soft" sx={DescriptionStyle}>
+              Mehedii Hassan Ui/Ux Designer The other hand we denounce with
+              righteou indg ation men who are so beguiled and demoraliz ed by
+              the of the mo ment.Dislike men who are so beguiled and dems ed by
+              the charms of pleas ure of the moment. Lorem
+            </Typography>
+          </Box>
         </CardContainerStyle>
       </div>
     </>
