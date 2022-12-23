@@ -4,7 +4,7 @@ import React from "react";
 const Boundary = ({ children }) => {
   const bound = {
     width: "1280px",
-    maxWidth: "99%",
+    maxWidth: "90%",
     margin: "0 auto",
   };
   return <Box sx={{ ...bound }}>{children}</Box>;

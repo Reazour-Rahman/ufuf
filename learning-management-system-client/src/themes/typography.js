@@ -23,9 +23,15 @@ const Typography = (fontFamily) => ({
     },
     h2: {
         fontWeight: 600,
-        fontSize: '1.875rem',
+        fontSize: '28px',
         fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
-        lineHeight: 1.27
+        lineHeight: 1.27,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '26px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '24px'
+        }
     },
     h3: {
         fontWeight: 600,
@@ -33,12 +39,12 @@ const Typography = (fontFamily) => ({
         fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
         lineHeight: 1.33
     },
-    // h4: {
-    //     fontWeight: 600,
-    //     fontSize: '20px',
-    //     fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
-    //     lineHeight: 1.4
-    // },
+    h4: {
+        fontWeight: 600,
+        fontSize: '20px',
+        fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
+        lineHeight: 1.4
+    },
     // h5: {
     //     fontWeight: 600,
     //     fontSize: '1rem',
@@ -145,7 +151,7 @@ const Typography = (fontFamily) => ({
         lineHeight: '30px', 
 
         [theme.breakpoints.down('md')]: {
-            fontSize: '1.7rem'
+            fontSize: '16px'
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '16px'
