@@ -100,7 +100,7 @@ const MoreAboutButton = styled("div")(({ theme }) => ({
   gap: "10px",
   margin: "35px 0px",
   background: "#5F2DED",
-  borderRadius: "2px",
+  borderRadius: "5px",
 }));
 
 const Accordion = styled((props) => (

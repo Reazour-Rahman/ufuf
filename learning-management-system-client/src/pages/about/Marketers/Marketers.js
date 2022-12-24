@@ -22,6 +22,11 @@ const HeaderStyling = {
   margin: "0 auto",
 };
 
+const ImageSize = {
+  width: "150px",
+  margin: " 0 auto",
+};
+
 const Marketers = () => {
   const theme = useTheme();
   return (
@@ -47,7 +52,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer1}
             />
@@ -55,7 +60,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer2}
             />
@@ -63,7 +68,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer3}
             />
@@ -71,7 +76,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer4}
             />
@@ -79,7 +84,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer5}
             />
@@ -87,7 +92,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer6}
             />
@@ -95,7 +100,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer7}
             />
@@ -103,7 +108,7 @@ const Marketers = () => {
           <Grid item xs={6} lg={3}>
             <img
               style={{
-                width: "100%",
+                ...ImageSize,
               }}
               src={marketer8}
             />

@@ -121,7 +121,7 @@ const Learning = () => {
               </Typography>
 
               <MoreAboutButton>
-                More About <BsArrowRight />
+                আরও সম্পর্কে <BsArrowRight />
               </MoreAboutButton>
             </Grid>
           </Grid>

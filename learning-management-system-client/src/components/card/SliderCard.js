@@ -25,17 +25,21 @@ const DescriptionStyle = {
   color: "rgba(20, 33, 43, 0.7)",
 };
 
-const CardContainerStyle = styled("section")(({ theme }) => ({
+const CardContainerStyle = {
   width: {
     lg: "570px",
-    md: "500px",
+    md: "100%",
     sm: "100%",
   },
   minHeight: "300px",
   borderRadius: "8px",
   background: "#FFFFFF",
-  padding: "40px",
-}));
+  padding: {
+    md: "40px",
+    sm: "10px",
+    xs: "10px",
+  },
+};
 
 const LineThroughStyle = styled("section")(({ theme }) => ({
   textDecorationLine: "line-through",
@@ -46,12 +50,20 @@ const CardDataContainerStyle = styled("section")(({ theme }) => ({
 }));
 
 const FlexHandle = {
-  display: "flex",
+  display: {
+    md: "flex",
+    sm: "block",
+    xs: "block",
+  },
   alignItems: "center",
 };
 
 const CardGaping = {
-  margin: "0px 10px",
+  margin: {
+    md: "0px 10px",
+    sm: "0px 5px",
+    xs: "0px 5px",
+  },
 };
 
 const DescriptionStyleGaping = {
@@ -69,7 +81,11 @@ const SliderCard = () => {
           ...CardGaping,
         }}
       >
-        <CardContainerStyle>
+        <Box
+          sx={{
+            ...CardContainerStyle,
+          }}
+        >
           {" "}
           <Box
             sx={{
@@ -114,7 +130,7 @@ const SliderCard = () => {
               প্রতারিত এবং তাদের দ্বারা প্রভাবিত মুহূর্ত আনন্দের charms. লরেম
             </Typography>
           </Box>
-        </CardContainerStyle>
+        </Box>
       </div>
     </>
   );

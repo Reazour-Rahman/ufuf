@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Box, Typography, useTheme, Rating } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { FaBook, FaComment } from "react-icons/fa";
-import { BsStopwatch } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
+import { BsStopwatch, BsSuitHeart, BsSuitHeartFill } from "react-icons/bs";
+import { AiOutlineHeart, AiTwotoneCalendar } from "react-icons/ai";
 import { FlexHandle } from "../../themes/customTheme/customTheme";
 
 //course card style start
@@ -25,19 +25,21 @@ const CategoryName = {
   // fontWeight: "600",
   // fontSize: "12px",
   borderRadius: "2px",
-  padding: "5px 3px",
+  padding: "5px 8px",
 };
 
 const StarColor = {
   background: " rgba(0, 0, 0, 0.16)",
+  // background: " white",
+  // color: "red",
   position: "absolute",
   right: "20px",
   top: "18px",
-  color: "white",
-  fontWeight: "600",
-  fontSize: "30px",
+  fontWeight: "900",
+  fontSize: "35px",
   borderRadius: "2px",
   padding: "5px 3px",
+  cursor: "pointer",
 };
 
 const CardContainerStyle = styled("section")(({ theme }) => ({
@@ -57,11 +59,6 @@ const LineThroughStyle = styled("section")(({ theme }) => ({
 const CardDataContainerStyle = styled("section")(({ theme }) => ({
   padding: "0px 22px",
 }));
-
-// export const FlexHandle = styled("section")(({ theme }) => ({
-//   display: "flex",
-//   alignItems: "center",
-// }));
 
 const RatingNumber = {
   marginLeft: "5px",
@@ -85,6 +82,7 @@ const UserImage = {
   width: "30px",
   height: "30px",
   borderRadius: "100%",
+  marginRight: "5px",
 };
 
 const FontMargin = {
@@ -92,9 +90,32 @@ const FontMargin = {
   color: "#53545B",
 };
 
+const IconsStyle = {
+  color: "#5F2DED",
+  fontSize: "22px",
+  fontWeight: 900,
+};
+
+const IconsFontStyle = {
+  color: "black",
+  fontSize: "18px",
+  fontWeight: 500,
+};
+
+const PrinceFontStyle = {
+  fontSize: "18px",
+  color: "#5F2DED",
+  fontWeight: "600",
+  marginTop: "10px",
+};
+
 //course card style finished
 
 const CourseCard = () => {
+  const [liked, setLiked] = useState(false);
+  const handleWishlist = () => {
+    setLiked(!liked);
+  };
   const theme = useTheme();
   return (
     <>
@@ -120,7 +141,21 @@ const CourseCard = () => {
               ট্রেন্ডিং কোর্স
             </Typography>
 
-            <AiOutlineHeart style={StarColor} />
+            {liked ? (
+              <BsSuitHeartFill
+                onClick={() => {
+                  handleWishlist();
+                }}
+                style={{ ...StarColor, color: `red` }}
+              />
+            ) : (
+              <BsSuitHeart
+                onClick={() => {
+                  handleWishlist();
+                }}
+                style={{ ...StarColor, color: `white` }}
+              />
+            )}
           </FlexHandle>
           <CardDataContainerStyle>
             <FlexHandle
@@ -130,28 +165,32 @@ const CourseCard = () => {
             >
               <FlexHandle
                 sx={{
-                  marginRight: "100px",
+                  marginRight: "60px",
                 }}
               >
                 <FaBook
                   style={{
-                    color: "#5F2DED",
-                    fontSize: "18px",
+                    ...IconsStyle,
                   }}
                 />
-                <Typography variant="body1" sx={FontMargin}>
-                  ২১ টি পাঠ
+                <Typography
+                  variant="body1"
+                  sx={{ ...FontMargin, ...IconsFontStyle }}
+                >
+                  ২৫ টি পাঠ
                 </Typography>
               </FlexHandle>
               <FlexHandle>
                 <BsStopwatch
                   style={{
-                    color: "#5F2DED",
-                    fontSize: "18px",
+                    ...IconsStyle,
                   }}
                 />
-                <Typography variant="body1" sx={FontMargin}>
-                  ১ ঘন্টা ৩০ মিনিট
+                <Typography
+                  variant="body1"
+                  sx={{ ...FontMargin, ...IconsFontStyle }}
+                >
+                  ২ ঘন্টা ৩০ মিনিট
                 </Typography>
               </FlexHandle>
             </FlexHandle>
@@ -165,12 +204,32 @@ const CourseCard = () => {
               প্রোগ্রামিং শেখা
             </Typography>
 
+            <Typography
+              variant="soft"
+              sx={{
+                color: theme.palette.common.black,
+              }}
+            >
+              এখান কোর্স সম্পর্কে একটি বিবরণ থাকবে
+            </Typography>
+
+            <FlexHandle sx={{ my: 1 }}>
+              <AiTwotoneCalendar
+                style={{
+                  ...IconsStyle,
+                }}
+              />
+              <Typography
+                variant="body1"
+                sx={{ ...FontMargin, ...IconsFontStyle }}
+              >
+                রবি, মঙ্গল, বৃহস্পতি
+              </Typography>
+            </FlexHandle>
+
             <FlexHandle
               sx={{
-                fontSize: "18px",
-                color: "#5F2DED",
-                fontWeight: "600",
-                marginTop: "10px",
+                ...PrinceFontStyle,
               }}
             >
               $৩২.০০{" "}
@@ -224,7 +283,7 @@ const CourseCard = () => {
                   />
                 </Box>
 
-                <Typography variant="subtitle2">Mehedii .H</Typography>
+                <Typography variant="subtitle2">ফাহাদ কিবরিয়া</Typography>
               </FlexHandle>
               <FlexHandle>
                 <Rating
@@ -235,7 +294,7 @@ const CourseCard = () => {
                   readOnly
                 />
                 <Typography sx={RatingNumber} variant="subtitle1">
-                  (2)
+                  (২)
                 </Typography>
               </FlexHandle>
             </FlexHandle>
