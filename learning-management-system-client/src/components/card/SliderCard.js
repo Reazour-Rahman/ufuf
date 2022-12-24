@@ -111,7 +111,7 @@ const CardImageMobile = {
 
 //course card style start
 
-const CliendImage = {
+const ClientImage = {
   width: "60px",
   height: "60px",
   borderRadius: "100%",
@@ -154,10 +154,10 @@ const CardDataContainerStyle = styled("section")(({ theme }) => ({
   padding: "0px 22px",
 }));
 
-const FlexHandle = styled("section")(({ theme }) => ({
+const FlexHandle ={
   display: "flex",
   alignItems: "center",
-}));
+};
 
 //course card style finished
 
@@ -172,18 +172,21 @@ const SliderCard = () => {
       >
         <CardContainerStyle>
           {" "}
-          <FlexHandle
+          <Box
             sx={{
+              ...FlexHandle,
               justifyContent: "space-between",
             }}
           >
-            <FlexHandle>
+            <Box sx={{
+              ...FlexHandle
+            }}>
               <img
                 src={
                   "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
                 }
                 className=""
-                style={CliendImage}
+                style={ClientImage}
                 alt=""
               />
 
@@ -195,7 +198,7 @@ const SliderCard = () => {
                   Ui/Ux Designer
                 </Typography>
               </div>
-            </FlexHandle>
+            </Box>
 
             <Rating
               className={`mr-2`}
@@ -204,7 +207,7 @@ const SliderCard = () => {
               size="small"
               readOnly
             />
-          </FlexHandle>
+          </Box>
           <Box
             sx={{
               marginTop: "20px",
