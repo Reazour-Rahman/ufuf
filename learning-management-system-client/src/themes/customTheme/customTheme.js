@@ -17,6 +17,13 @@ export const AutoContainer = styled("div")(({ theme }) => ({
   },
 }));
 
+export const BannerPadding = {
+  padding: {
+    md: "50px  0px",
+    xs: "20px  0px",
+  },
+};
+
 export const SIZES = {
   extraSmall: 8,
   small: 10,

@@ -117,7 +117,7 @@ const CourseCard = () => {
             />
 
             <Typography sx={CategoryName} variant="body1">
-              Trending Course
+              ট্রেন্ডিং কোর্স
             </Typography>
 
             <AiOutlineHeart style={StarColor} />
@@ -140,7 +140,7 @@ const CourseCard = () => {
                   }}
                 />
                 <Typography variant="body1" sx={FontMargin}>
-                  21 lessons
+                  ২১ টি পাঠ
                 </Typography>
               </FlexHandle>
               <FlexHandle>
@@ -151,7 +151,7 @@ const CourseCard = () => {
                   }}
                 />
                 <Typography variant="body1" sx={FontMargin}>
-                  1hr 30 min
+                  ১ ঘন্টা ৩০ মিনিট
                 </Typography>
               </FlexHandle>
             </FlexHandle>
@@ -162,7 +162,7 @@ const CourseCard = () => {
                 color: theme.palette.common.black,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur
+              প্রোগ্রামিং শেখা
             </Typography>
 
             <FlexHandle
@@ -173,7 +173,7 @@ const CourseCard = () => {
                 marginTop: "10px",
               }}
             >
-              $32.00{" "}
+              $৩২.০০{" "}
               <span
                 style={{
                   color: "#C4C4C4",
@@ -187,7 +187,7 @@ const CourseCard = () => {
                   fontSize: "16px",
                 }}
               >
-                $67.00
+                $৬৭.০০
               </LineThroughStyle>
               <LineThroughStyle
                 sx={{
@@ -195,7 +195,7 @@ const CourseCard = () => {
                   marginLeft: "20px",
                 }}
               >
-                Free
+                ফ্রি
               </LineThroughStyle>
             </FlexHandle>
 

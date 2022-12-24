@@ -1,114 +1,16 @@
 import React, { useState } from "react";
 import { Grid, Box, Typography, useTheme, Rating } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { BsArrowRight, BsChevronDown, BsStopwatch } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsChevronDoubleDown,
+  BsChevronDown,
+  BsStopwatch,
+} from "react-icons/bs";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-
-const BannerContainerStyle = styled("section")(({ theme }) => ({
-  //   backgroundColor: "#320fa1",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  overflow: "hidden",
-}));
-const BannerPadding = {
-  padding: {
-    md: "50px  0px",
-    xs: "20px  0px",
-  },
-};
-
-const AutoContainer = styled("div")(({ theme }) => ({
-  position: "static",
-  maxWidth: "90%",
-  width: "1280px",
-  margin: "0 auto",
-}));
-
-const H1 = styled("h1")(({ theme }) => ({
-  marginBottom: "28px",
-  color: "black",
-  // fontSize: "45px",
-  // lineHeight: "58px",
-  // fontWeight: "700",
-}));
-const PlayIcon = {
-  padding: "40px",
-  textAlign: "center",
-  fontSize: "24px",
-  color: "#fff",
-  backgroundColor: "#e654bd",
-  //   boxShadow: "0px 11px 21.25px 3.75px rgb(45 5 156 / 65%)",
-  borderRadius: "50%",
-};
-const Lay = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  // justifyContent: 'space-between',
-  gap: "10px",
-  color: "#68666C",
-  margin: "35px 0px",
-}));
-const PTag = styled("p")(({ theme }) => ({
-  color: theme.palette.text.primary,
-  fontSize: "16px",
-}));
-
-const mystery = {
-  display: {
-    md: "block",
-    sm: "none",
-    xs: "none",
-  },
-};
-const mysteryActive = {
-  display: {
-    md: "none",
-    sm: "block",
-    xs: "block",
-  },
-};
-
-const CardImage = {
-  zIndex: "500",
-  position: "absolute",
-  width: "470px",
-  ...mystery,
-};
-const CardImageMobile = {
-  width: "70%",
-  ...mysteryActive,
-};
-
-const MoreAboutButton = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "10px 0px",
-  cursor: "pointer",
-  width: "100%",
-  color: "white",
-  gap: "10px",
-  margin: "35px 0px",
-  background: "#5F2DED",
-  borderRadius: "2px",
-}));
-
-const AboutUsStylingButton = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "5x 0px",
-  cursor: "pointer",
-  width: "100px",
-  color: "#5F2DED",
-  margin: "35px 0px",
-  background: "rgba(94, 45, 237, 0.07)",
-  borderRadius: "14px",
-  fontWeight: 600,
-}));
+import { AutoContainer } from "../../themes/customTheme/customTheme";
 
 const data = [
   {
@@ -173,13 +75,37 @@ const data = [
   },
 ];
 
+const BannerContainerStyle = styled("section")(({ theme }) => ({
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  overflow: "hidden",
+}));
+
+const BannerPadding = {
+  padding: {
+    md: "50px  0px",
+    xs: "20px  0px",
+  },
+};
+
+const MoreAboutButton = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "10px 0px",
+  cursor: "pointer",
+  width: "100%",
+  color: "white",
+  gap: "10px",
+  margin: "35px 0px",
+  background: "#5F2DED",
+  borderRadius: "2px",
+}));
+
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  // border: `1px solid ${theme.palette.divider}`,
-  // "&:not(:last-child)": {
-  //   borderBottom: 0,
-  // },
   padding: "10px 0px",
   "&:before": {
     display: "none",
@@ -188,15 +114,14 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<BsChevronDown sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={
+      <BsChevronDoubleDown
+        style={{ fontSize: "20px", color: "black", fontWeight: 900 }}
+      />
+    }
     {...props}
   />
 ))(({ theme }) => ({
-  // backgroundColor:
-  //   theme.palette.mode === "dark"
-  //     ? "rgba(255, 255, 255, .05)"
-  //     : "rgba(0, 0, 0, .03)",
-
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(180deg)",
   },
@@ -208,6 +133,22 @@ const AccordionSummary = styled((props) => (
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
+
+const AccordionBackground = {
+  padding: 2,
+  borderRadius: "15px",
+  boxShadow:
+    "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
+};
+const SingleAccordionStyle = {
+  margin: "0px 0px",
+  boxShadow: "0",
+};
+
+const HeaderStyling = {
+  marginBottom: "20px",
+  textAlign: "center",
+};
 
 const Faq = () => {
   const theme = useTheme();
@@ -223,52 +164,47 @@ const Faq = () => {
         <Typography
           variant="h1"
           sx={{
+            ...HeaderStyling,
             color: theme.palette.common.black,
-            marginBottom: "20px",
-            textAlign: "center",
           }}
         >
           আপনাদের সাধারণ জিজ্ঞাসা
         </Typography>
         <Box
           sx={{
+            ...AccordionBackground,
             backgroundColor: theme.palette.common.white,
-            padding: 2,
-            borderRadius: "15px",
-            boxShadow:
-              "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
           }}
         >
           {data.slice(0, count).map((a) => {
             return (
               <Accordion
                 sx={{
-                  // padding: "10px 0px",
-                  // borderRadius: "15px",
-                  margin: "0px 0px",
-                  boxShadow: "0",
+                  ...SingleAccordionStyle,
                   borderBottom: `${
                     expanded === a.id
-                      ? "2px solid #ffc000"
+                      ? `2px solid ${theme.palette.background.defaultPink}`
                       : "1px solid #eaecf0"
                   }`,
                   "&:(last-child)": {
                     borderBottom: 0,
                   },
-                  background: `${expanded === a.id ? "#fffbed" : "white"}`,
+                  background: `${
+                    expanded === a.id
+                      ? `${theme.palette.background.transparent}`
+                      : "white"
+                  }`,
                 }}
                 expanded={expanded === a.id}
                 onChange={handleChange(a.id)}
               >
                 <AccordionSummary
-                  expandIcon={<BsChevronDown />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
-                  style={{ margin: "0px 0px" }}
                 >
                   <Typography variant="h3">{a.ques}</Typography>
                 </AccordionSummary>
-                <AccordionDetails style={{ margin: "0px 0px" }}>
+                <AccordionDetails>
                   <Typography variant="soft">{a.ans}</Typography>
                 </AccordionDetails>
               </Accordion>
@@ -286,7 +222,6 @@ const Faq = () => {
           }}
         >
           {count === 5 ? " আরো দেখুন" : "কমিয়ে দেখুন"}
-          {/* <BsArrowRight /> */}
         </MoreAboutButton>
       </AutoContainer>
     </BannerContainerStyle>
