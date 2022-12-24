@@ -4,6 +4,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { Typography, useTheme } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { AutoContainer } from "../../../themes/customTheme/customTheme";
 
 const TabColor = {
   background: "#F7F7F7",
@@ -12,18 +13,6 @@ const TabColor = {
   color: "#191B1E",
   marginRight: "10px",
 };
-
-const AutoContainer = styled("div")(({ theme }) => ({
-  position: "static",
-  maxWidth: "90%",
-  width: "1280px",
-  margin: "0 auto",
-  padding: {
-    md: "35px 0px",
-    sm: "25px 0px",
-    xs: "10px 0px",
-  },
-}));
 
 const TabsSection = () => {
   const [value, setValue] = React.useState("about");

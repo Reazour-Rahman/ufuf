@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import { FaBook, FaComment } from "react-icons/fa";
 import { BsStopwatch } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
+import { FlexHandle } from "../../themes/customTheme/customTheme";
 
 //course card style start
 
@@ -57,10 +58,10 @@ const CardDataContainerStyle = styled("section")(({ theme }) => ({
   padding: "0px 22px",
 }));
 
-export const FlexHandle = styled("section")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-}));
+// export const FlexHandle = styled("section")(({ theme }) => ({
+//   display: "flex",
+//   alignItems: "center",
+// }));
 
 const RatingNumber = {
   marginLeft: "5px",
