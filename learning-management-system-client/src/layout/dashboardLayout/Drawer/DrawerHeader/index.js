@@ -5,7 +5,7 @@ import { Chip, Stack } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 // project import
-import Logo from '../../../../components/Logo';
+// import Logo from '../../../../components/Logo';
 import DrawerHeaderStyled from './DrawerHeaderStyled';
 
 // ==============================|| DRAWER HEADER ||============================== //
@@ -17,7 +17,7 @@ const DrawerHeader = ({ open }) => {
         // only available in paid version
         <DrawerHeaderStyled theme={theme} open={open}>
             <Stack direction="row" spacing={1} alignItems="center">
-                <Logo />
+                LOGO HERE
                 <Chip
                     label={process.env.REACT_APP_VERSION}
                     size="small"

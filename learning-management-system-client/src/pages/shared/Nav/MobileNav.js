@@ -3,14 +3,13 @@ import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import { ImCross } from "react-icons/im";
 import { Typography, useTheme } from "@mui/material";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
+import { AiOutlineMenuFold } from 'react-icons/ai';
 
 const navItems = [
   { title: "হোম", link: "home" },
@@ -87,7 +86,7 @@ export default function MobileNav() {
 
   return (
     <React.Fragment>
-      <Button onClick={toggleDrawer("top", true)}>MENU</Button>
+      <Button onClick={toggleDrawer("top", true)}><AiOutlineMenuFold style={{fontSize:"25px", color: theme.palette.text.heading}}/></Button>
       <SwipeableDrawer
         anchor="top"
         open={state["top"]}

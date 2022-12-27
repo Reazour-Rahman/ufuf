@@ -12,6 +12,7 @@ import {
   AutoContainer,
   BannerPadding,
 } from "../../../themes/customTheme/customTheme";
+import Heading from "../../../components/heading/Heading";
 
 const HeaderStyling = {
   textAlign: "center",
@@ -32,16 +33,12 @@ const Marketers = () => {
   return (
     <Box sx={{ ...BannerPadding }}>
       <AutoContainer>
-        <Typography
-          variant="h2"
-          sx={{
-            ...HeaderStyling,
-            color: theme.palette.common.black,
-          }}
-        >
-          প্রকৌশলীদের দ্বারা বিশ্বস্ত বিপণনকারীদের উপর নির্ভরশীল এবং নির্বাহীদের
-          দ্বারা প্রিয়
-        </Typography>
+        <Heading
+          head={
+            "প্রকৌশলীদের দ্বারা বিশ্বস্ত বিপণনকারীদের উপর নির্ভরশীল এবং নির্বাহীদের দ্বারা প্রিয়"
+          }
+          title={"ব্র্যান্ড"}
+        />
 
         <Grid
           container

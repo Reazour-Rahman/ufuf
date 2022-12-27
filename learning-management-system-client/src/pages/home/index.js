@@ -1,18 +1,17 @@
 import React from 'react';
+import Faq from '../../components/faq/Faq';
 import Banner from './banner/Banner';
-import { styled } from '@mui/material/styles';
+import Course from './course/Course';
+import Goal from './goal/Goal';
 
-const Container = styled('div')(({ theme }) => ({
-    display: 'flex',
-    gap: '30px',
-    marginTop: '14px'
-}));
 const index = () => {
     return (
         <div>
             <Banner/>
+            <Goal/>
+            <Course/>
+            <Faq/>
         </div>
     );
 };
-/* <Box sx={{ width: '1180px', maxWidth: '99%', margin: '0 auto' }}>{children}</Box> */
 export default index;

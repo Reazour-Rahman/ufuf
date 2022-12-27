@@ -2,7 +2,8 @@ import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
-import LogoSection from "../../../components/Logo/Logo";
+import LogoSection from "../../../components/logo";
+// import LogoSection from "../../../components/Logo/Logo";
 import MobileNav from "./MobileNav";
 
 const NavBar = () => {
@@ -20,6 +21,8 @@ const NavBar = () => {
     right: 0,
     width: "100%",
     py: 1.5,
+    zIndex: 999,
+    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
   };
   const lay = {
     display: "flex",
@@ -41,22 +44,26 @@ const NavBar = () => {
       sm: "flex",
       xs: "flex",
     },
-    alignItems:"center",
-    justifyContent:"space-between",
-    px: 2.5
+    alignItems: "center",
+    justifyContent: "space-between",
+    px: 2.5,
   };
   return (
     <>
       <Box sx={{ ...mysteryDekstop }}>
         <Grid container>
           <Grid item md={4} sx={{ ...lay }}>
-            <LogoSection/>
+            <LogoSection />
           </Grid>
           <Grid item md={4} sx={{ ...lay }}>
             {navItems.map((item, index) => (
-              <Button key={index}>
-                <Typography variant="soft">{item.title}</Typography>
-              </Button>
+              <Typography
+                key={index}
+                sx={{ color: theme.palette.text.heading, px: 2 }}
+                variant="soft"
+              >
+                {item.title}
+              </Typography>
             ))}
           </Grid>
           <Grid item md={4} sx={{ ...lay, gap: 2 }}>

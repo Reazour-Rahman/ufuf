@@ -17,6 +17,7 @@ import {
   AutoContainer,
   BannerPadding,
 } from "../../../themes/customTheme/customTheme";
+import Heading from "../../../components/heading/Heading";
 
 const AboutUsStylingButton = styled("div")(({ theme }) => ({
   display: "flex",
@@ -60,23 +61,7 @@ const Testimonial = () => {
     <>
       <Box sx={{ ...BannerPadding }}>
         <AutoContainer>
-          <AboutUsStylingButton
-            sx={{
-              ...AlignCenter,
-            }}
-          >
-            Course List
-          </AboutUsStylingButton>
-
-          <Typography
-            sx={{
-              ...HeaderStyling,
-              color: theme.palette.common.black,
-            }}
-            variant="h1"
-          >
-            ক্লায়েন্ট প্রশংসাপত্র
-          </Typography>
+          <Heading head={"ক্লায়েন্ট প্রশংসাপত্র"} title={"প্রশংসাপত্র"}/>
 
           {/* <SliderCard /> */}
 

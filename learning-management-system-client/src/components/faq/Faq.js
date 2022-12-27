@@ -11,6 +11,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { AutoContainer } from "../../themes/customTheme/customTheme";
+import Heading from "../heading/Heading";
 
 const data = [
   {
@@ -100,7 +101,7 @@ const MoreAboutButton = styled("div")(({ theme }) => ({
   gap: "10px",
   margin: "35px 0px",
   background: "#5F2DED",
-  borderRadius: "5px",
+  borderRadius: "15px",
 }));
 
 const Accordion = styled((props) => (
@@ -161,15 +162,7 @@ const Faq = () => {
   return (
     <BannerContainerStyle sx={{ ...BannerPadding }}>
       <AutoContainer>
-        <Typography
-          variant="h1"
-          sx={{
-            ...HeaderStyling,
-            color: theme.palette.common.black,
-          }}
-        >
-          আপনাদের সাধারণ জিজ্ঞাসা
-        </Typography>
+        <Heading title={"জিজ্ঞাসা"} head={"আপনাদের সাধারণ জিজ্ঞাসা"}/>
         <Box
           sx={{
             ...AccordionBackground,
@@ -202,7 +195,7 @@ const Faq = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography variant="h3">{a.ques}</Typography>
+                  <Typography variant="h5">{a.ques}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography variant="soft">{a.ans}</Typography>

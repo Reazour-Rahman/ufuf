@@ -48,7 +48,7 @@ const CardContainerStyle = styled("section")(({ theme }) => ({
   boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
   margin: "0 auto",
   minHeight: "420px",
-  borderRadius: "5px",
+  borderRadius: "15px",
   background: "#FFFFFF",
 }));
 
@@ -196,7 +196,7 @@ const CourseCard = () => {
             </FlexHandle>
 
             <Typography
-              variant="h3"
+              variant="h4"
               sx={{
                 color: theme.palette.common.black,
               }}

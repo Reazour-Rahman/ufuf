@@ -88,7 +88,7 @@ const Learning = () => {
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <AboutUsStylingButton>About Us</AboutUsStylingButton>
               <Typography
-                variant="h1"
+                variant="h2"
                 sx={{
                   color: theme.palette.common.black,
                 }}
