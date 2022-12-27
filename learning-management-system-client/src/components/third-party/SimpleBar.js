@@ -13,6 +13,7 @@ const RootStyle = styled("section")({
   flexGrow: 1,
   height: "100%",
   overflow: "hidden",
+  background: "white",
 });
 
 // scroll bar wrapper
@@ -50,7 +51,7 @@ export default function SimpleBarScroll({ children, sx, ...other }) {
           },
         }}
       >
-        <SimpleBarStyle timeout={500} clickOnTrack={false} sx={sx} {...other}>
+        <SimpleBarStyle  sx={sx} {...other}>
           {children}
         </SimpleBarStyle>
       </RootStyle>
