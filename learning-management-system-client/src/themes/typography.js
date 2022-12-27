@@ -45,12 +45,12 @@ const Typography = (fontFamily) => ({
         fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
         lineHeight: 1.4
     },
-    // h5: {
-    //     fontWeight: 600,
-    //     fontSize: '1rem',
-    //     fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
-    //     lineHeight: 1.5
-    // },
+    h5: {
+        fontWeight: 500,
+        fontSize: '18px',
+        fontFamily: ['Hind Siliguri', 'sans-serif'].join(','),
+        lineHeight: 1.3
+    },
     h6: {
         fontWeight: 400,
         fontSize: '0.875rem',

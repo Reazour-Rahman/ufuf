@@ -6,7 +6,7 @@ const Heading = ({ title, head, subHead }) => {
   const lay = {
     textAlign: "center",
     marginBottom: "70px",
-    color: theme.palette.background.hardPurple,
+    color: theme.palette.text.heading,
   };
   return (
     <Box sx={{ ...lay }}>
