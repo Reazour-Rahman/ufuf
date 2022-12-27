@@ -77,7 +77,7 @@ const Banner = () => {
     fontSize: "28px",
   };
   return (
-    <Box sx={{ mt: { md: 11, sm: 10, xs: 10 }}}>
+    <Box sx={{ mt: { md: 3.5, sm: 10, xs: 10 }, backgroundColor: theme.palette.common.white}}>
       <Box sx={{ position: "relative" }}>
         <BannerContainerStyle sx={{ ...mystery }}>
           <Boundary>

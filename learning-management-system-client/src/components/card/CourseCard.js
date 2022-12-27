@@ -45,7 +45,7 @@ const CardContainerStyle = styled("section")(({ theme }) => ({
   boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
   margin: "0 auto",
   minHeight: "420px",
-  borderRadius: "5px",
+  borderRadius: "15px",
   background: "#FFFFFF",
 }));
 
@@ -138,8 +138,8 @@ const CourseCard = () => {
                     fontSize: "18px",
                   }}
                 />
-                <Typography variant="body1" sx={FontMargin}>
-                  21 lessons
+                <Typography variant="body1" sx={{...FontMargin}}>
+                ২২ টি পাঠ
                 </Typography>
               </FlexHandle>
               <FlexHandle>
@@ -150,18 +150,18 @@ const CourseCard = () => {
                   }}
                 />
                 <Typography variant="body1" sx={FontMargin}>
-                  1hr 30 min
+                ৩২ ঘন্টা
                 </Typography>
               </FlexHandle>
             </FlexHandle>
 
             <Typography
-              variant="h3"
+              variant="h4"
               sx={{
                 color: theme.palette.common.black,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur
+              দারুণ সব অ্যানিমেটেড উদাহরণের ভিডিও লেসনে শেখা
             </Typography>
 
             <FlexHandle
