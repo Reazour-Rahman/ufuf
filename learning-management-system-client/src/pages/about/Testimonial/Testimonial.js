@@ -13,96 +13,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 import CardMedia from "@mui/material/CardMedia";
 import SliderCard from "../../../components/card/SliderCard";
 import Carousel from "react-elastic-carousel";
-
-const BannerContainerStyle = styled("section")(({ theme }) => ({
-  //   backgroundColor: "#320fa1",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  overflow: "hidden",
-}));
-const BannerPadding = {
-  padding: {
-    md: "135px 0px",
-    sm: "115px 0px",
-    xs: "100px 0px",
-  },
-};
-
-const AutoContainer = styled("div")(({ theme }) => ({
-  position: "static",
-  maxWidth: "90%",
-  width: "1280px",
-  margin: "0 auto",
-}));
-const H1 = styled("h1")(({ theme }) => ({
-  marginBottom: "28px",
-  color: "black",
-  fontSize: "45px",
-  lineHeight: "58px",
-  fontWeight: "700",
-}));
-const PlayIcon = {
-  padding: "40px",
-  textAlign: "center",
-  fontSize: "24px",
-  color: "#fff",
-  backgroundColor: "#e654bd",
-  //   boxShadow: "0px 11px 21.25px 3.75px rgb(45 5 156 / 65%)",
-  borderRadius: "50%",
-};
-const Lay = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  // justifyContent: 'space-between',
-  gap: "10px",
-  color: "#68666C",
-  margin: "35px 0px",
-}));
-const PTag = styled("p")(({ theme }) => ({
-  color: "#68666C",
-  fontSize: "16px",
-}));
-
-const mystery = {
-  display: {
-    md: "block",
-    sm: "none",
-    xs: "none",
-  },
-};
-const mysteryActive = {
-  display: {
-    md: "none",
-    sm: "block",
-    xs: "block",
-  },
-};
-
-const CardImage = {
-  zIndex: "500",
-  position: "absolute",
-  width: "470px",
-  ...mystery,
-};
-const CardImageMobile = {
-  width: "70%",
-  ...mysteryActive,
-};
-
-const MoreAboutButton = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "10px 0px",
-  cursor: "pointer",
-  width: "170px",
-  color: "white",
-  gap: "10px",
-  margin: "35px 0px",
-  background: "#5F2DED",
-  borderRadius: "2px",
-}));
+import {
+  AutoContainer,
+  BannerPadding,
+} from "../../../themes/customTheme/customTheme";
 
 const AboutUsStylingButton = styled("div")(({ theme }) => ({
   display: "flex",
@@ -118,29 +32,6 @@ const AboutUsStylingButton = styled("div")(({ theme }) => ({
   fontWeight: 600,
 }));
 
-const data = [
-  {
-    name: "name",
-    data: "ravo",
-  },
-  {
-    name: "name",
-    data: "ravo",
-  },
-  {
-    name: "name",
-    data: "ravo",
-  },
-  {
-    name: "name",
-    data: "ravo",
-  },
-  {
-    name: "name",
-    data: "ravo",
-  },
-];
-
 const items = [
   { id: 1, title: "item #1" },
   { id: 2, title: "item #2" },
@@ -148,6 +39,15 @@ const items = [
   { id: 4, title: "item #4" },
   { id: 5, title: "item #5" },
 ];
+
+const AlignCenter = {
+  margin: "0 auto",
+};
+
+const HeaderStyling = {
+  textAlign: "center",
+  marginBottom: "20px",
+};
 
 const Testimonial = () => {
   const breakPoints = [
@@ -158,22 +58,25 @@ const Testimonial = () => {
   const theme = useTheme();
   return (
     <>
-      <BannerContainerStyle sx={{ ...BannerPadding }}>
+      <Box sx={{ ...BannerPadding }}>
         <AutoContainer>
           <AboutUsStylingButton
             sx={{
-              margin: "0 auto",
+              ...AlignCenter,
             }}
           >
             Course List
           </AboutUsStylingButton>
-          <H1
+
+          <Typography
             sx={{
-              textAlign: "center",
+              ...HeaderStyling,
+              color: theme.palette.common.black,
             }}
+            variant="h1"
           >
-            Client Testimonial
-          </H1>
+            ক্লায়েন্ট প্রশংসাপত্র
+          </Typography>
 
           {/* <SliderCard /> */}
 
@@ -194,7 +97,7 @@ const Testimonial = () => {
             ))}
           </Carousel>
         </AutoContainer>
-      </BannerContainerStyle>
+      </Box>
     </>
   );
 };

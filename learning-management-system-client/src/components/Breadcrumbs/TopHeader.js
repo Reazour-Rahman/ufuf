@@ -6,9 +6,6 @@ import { styled } from "@mui/material/styles";
 import banner from "../../assets/Pages/About/header/banner.png";
 const BannerContainerStyle = styled("section")(({ theme }) => ({
   backgroundImage: `url("${banner}")`,
-  // position: "relative",
-
-  // backgroundColor: "#320fa1",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -17,9 +14,8 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 
 const BannerPadding = {
   padding: {
-    md: "80px  0px",
-    sm: "40px  0px",
-    xs: "30px  0px",
+    md: "100px 50px  0px",
+    xs: "20px  0px",
   },
 };
 
@@ -39,20 +35,15 @@ const AutoContainer = styled("div")(({ theme }) => ({
   margin: "0 auto",
 }));
 
-const H1 = styled("h1")(({ theme }) => ({
-  marginBottom: "28px",
-  color: "black",
-  fontSize: "45px",
-  lineHeight: "58px",
-  fontWeight: "700",
-}));
 
 const TopHeader = () => {
   const theme = useTheme();
   return (
     <BannerContainerStyle sx={{ ...BannerPadding }}>
       <AutoContainer>
-        <H1 sx={Align}>About</H1>
+        <Typography variant="h1" sx={Align}>
+          About
+        </Typography>
         <Breadcrumbs sx={FlexHandle} aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="/">
             MUI

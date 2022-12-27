@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
-import LogoSection from "../../../components/logo";
+import LogoSection from "../../../components/Logo/Logo";
 import MobileNav from "./MobileNav";
 
 const NavBar = () => {
