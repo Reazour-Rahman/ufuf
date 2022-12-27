@@ -6,9 +6,6 @@ import { styled } from "@mui/material/styles";
 import banner from "../../assets/Pages/About/header/banner.png";
 const BannerContainerStyle = styled("section")(({ theme }) => ({
   backgroundImage: `url("${banner}")`,
-  // position: "relative",
-
-  // backgroundColor: "#320fa1",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -17,7 +14,7 @@ const BannerContainerStyle = styled("section")(({ theme }) => ({
 
 const BannerPadding = {
   padding: {
-    md: "50px  0px",
+    md: "100px 50px  0px",
     xs: "20px  0px",
   },
 };
@@ -38,13 +35,6 @@ const AutoContainer = styled("div")(({ theme }) => ({
   margin: "0 auto",
 }));
 
-const H1 = styled("h1")(({ theme }) => ({
-  marginBottom: "28px",
-  color: "black",
-  fontSize: "45px",
-  lineHeight: "58px",
-  fontWeight: "700",
-}));
 
 const TopHeader = () => {
   const theme = useTheme();

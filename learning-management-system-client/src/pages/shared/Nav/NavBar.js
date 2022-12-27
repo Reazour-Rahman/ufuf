@@ -3,6 +3,7 @@ import React from "react";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
 import LogoSection from "../../../components/logo";
+// import LogoSection from "../../../components/Logo/Logo";
 import MobileNav from "./MobileNav";
 
 const NavBar = () => {
@@ -52,6 +53,8 @@ const NavBar = () => {
       <Box sx={{ ...mysteryDekstop }}>
         <Grid container>
           <Grid item md={4} sx={{ ...lay }}>
+            {/* <LogoSection/> */}
+            {/* <Typography >লোগো</Typography> */}
             <LogoSection/>
           </Grid>
           <Grid item md={4} sx={{ ...lay }}>
@@ -69,7 +72,7 @@ const NavBar = () => {
       </Box>
 
       <Box sx={{ ...mysteryMobile, ...container }}>
-        <LogoSection/>
+        {/* <LogoSection/> */}LOGO
         <MobileNav />
       </Box>
     </>

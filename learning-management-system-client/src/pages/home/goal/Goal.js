@@ -56,7 +56,7 @@ const Goal = () => {
                 <Grid key={index} item xs={6} sm={4} md={3}>
                   <Box sx={{ ...gridItem }}>
                     <AiFillApple style={{ fontSize: "26px" }} />
-                    <Typography variant="h3">{e.title}</Typography>
+                    <Typography variant="h4">{e.title}</Typography>
                     <Typography variant="subtitle1">{e.sub}</Typography>
                   </Box>
                 </Grid>

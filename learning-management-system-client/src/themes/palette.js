@@ -61,6 +61,7 @@ const Palette = (mode) => {
         defaultPink: paletteColor.pink.main,
         lightPink: paletteColor.pink.light,
         hardPink: paletteColor.pink.hard,
+        transparent: paletteColor.pink.transparent,
 
         defaultPurple: paletteColor.purple.main,
         lightPurple: paletteColor.purple.light,

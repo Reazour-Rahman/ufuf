@@ -2,6 +2,7 @@ import { lazy } from "react";
 
 // project import
 import Loadable from "../components/suspense/Loadable";
+import DashboardLayout from "../layout/dashboardLayout/DashboardLayout";
 import MainLayout from "../layout/mainLayout/MainLayout";
 
 // render - dashboard
@@ -28,6 +29,10 @@ const MainRoutes = {
     {
       path: "login",
       element: <AuthLogin />,
+    },
+    {
+      path: "dashboard",
+      element: <DashboardLayout />,
     },
   ],
 };

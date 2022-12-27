@@ -10,7 +10,7 @@ const Heading = ({ title, head, subHead }) => {
   };
   return (
     <Box sx={{ ...lay }}>
-      <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+      <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
         {title}
       </Typography>
       <Typography variant="h2">{head}</Typography>

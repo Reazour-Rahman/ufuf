@@ -1,18 +1,12 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { ButtonBase, Typography } from '@mui/material';
 
-// material-ui
-import { ButtonBase } from '@mui/material';
-
-// project import
-import Logo from './Logo';
-
-
-// ==============================|| MAIN LOGO ||============================== //
+// =============|| MAIN LOGO ||============ //
 
 const LogoSection = ({ sx, to }) => (
     <ButtonBase disableRipple component={Link} to="/" sx={sx}>
-        {/* <Logo /> */}
+        <Logo/>
     </ButtonBase>
 );
 
@@ -22,3 +16,14 @@ LogoSection.propTypes = {
 };
 
 export default LogoSection;
+
+
+
+const Logo = () => {
+    return (
+        <Typography variant="h4" sx={{color:"black"}}>
+            LOGO HERE
+        </Typography>
+    );
+};
+
