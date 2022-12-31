@@ -53,7 +53,7 @@ const Palette = (mode) => {
         primary: paletteColor.primary.main,
         disabled: paletteColor.grey[300],
       },
-      divider: paletteColor.grey[200],
+      divider: paletteColor.grey[500],
       background: {
         paper: paletteColor.grey[0],
         default: paletteColor.grey.A50,
@@ -61,6 +61,7 @@ const Palette = (mode) => {
         defaultPink: paletteColor.pink.main,
         lightPink: paletteColor.pink.light,
         hardPink: paletteColor.pink.hard,
+        transparent: paletteColor.pink.transparent,
 
         defaultPurple: paletteColor.purple.main,
         lightPurple: paletteColor.purple.light,
