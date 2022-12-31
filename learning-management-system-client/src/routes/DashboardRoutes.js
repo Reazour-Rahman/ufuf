@@ -22,7 +22,7 @@ const DashboardRoutes = {
       element: <Home />,
     },
     {
-      path: "dahsboardAbout",
+      path: "/dashboard/about",
       element: <About />,
     },
   ],
