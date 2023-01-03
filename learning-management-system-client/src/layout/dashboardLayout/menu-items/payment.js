@@ -48,6 +48,14 @@ const payment = {
             type: 'item',
             url: '/manage-payment',
             icon: icons.QuestionOutlined
+        },
+        ,
+        {
+            id: 'course-Management',
+            title: 'course-Managementt',
+            type: 'item',
+            url: '/course-Management',
+            icon: icons.QuestionOutlined
         }
     ]
 };
