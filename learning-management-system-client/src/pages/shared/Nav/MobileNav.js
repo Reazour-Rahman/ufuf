@@ -10,6 +10,7 @@ import { Typography, useTheme } from "@mui/material";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
 import { AiOutlineMenuFold } from 'react-icons/ai';
+import { NavLink } from "react-router-dom";
 
 const navItems = [
   { title: "হোম", link: "home" },
@@ -71,6 +72,8 @@ export default function MobileNav() {
               <Typography
                 variant="h4"
                 sx={{ color: theme.palette.common.white }}
+                as={NavLink}
+                to={text.link}
               >
                 {text.title}
               </Typography>

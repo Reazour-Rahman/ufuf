@@ -23,7 +23,11 @@ const MainRoutes = {
       element: <Home />,
     },
     {
-      path: "/about",
+      path: "/home",
+      element: <Home />,
+    },
+    {
+      path: "/about-us",
       element: <About />,
     },
     {
