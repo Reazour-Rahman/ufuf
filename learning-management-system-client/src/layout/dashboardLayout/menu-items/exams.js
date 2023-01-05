@@ -10,22 +10,22 @@ const icons = {
 // ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
 
 const exams = {
-    id: 'exams',
-    title: 'Exams',
+    id: 'course',
+    title: 'Courses',
     type: 'item',
     children: [
         {
-            id: 'Exam-Mark',
-            title: 'Exam Mark Entry',
+            id: 'course-catagories',
+            title: 'Catagories',
             type: 'item',
-            url: '/exam-mark',
+            url: '/course-catagories',
             icon: icons.ChromeOutlined
         },
         {
-            id: 'view-result',
-            title: 'View Result and SMS',
+            id: 'course-list',
+            title: 'Course List',
             type: 'item',
-            url: '/view-result',
+            url: '/course-list',
             icon: icons.QuestionOutlined
         }
     ]

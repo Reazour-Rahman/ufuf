@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import PinkButton from "../../../components/button/PinkButton";
 import PurpleButton from "../../../components/button/purpleButton";
 import LogoSection from "../../../components/logo";
@@ -61,6 +62,8 @@ const NavBar = () => {
                 key={index}
                 sx={{ color: theme.palette.text.heading, px: 2 }}
                 variant="soft"
+                as={NavLink}
+                to={item.link}
               >
                 {item.title}
               </Typography>
@@ -74,7 +77,7 @@ const NavBar = () => {
       </Box>
 
       <Box sx={{ ...mysteryMobile, ...container }}>
-        <LogoSection/>
+        <LogoSection />
         <MobileNav />
       </Box>
     </>

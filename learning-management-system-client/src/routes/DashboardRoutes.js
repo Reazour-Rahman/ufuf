@@ -27,7 +27,7 @@ const DashboardRoutes = {
       element: <About />,
     },
     {
-      path: "/dashboard/course-Management",
+      path: "/dashboard/course-list",
       element: <CourseManagement />,
     },
   ],
