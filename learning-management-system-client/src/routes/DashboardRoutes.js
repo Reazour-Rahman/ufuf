@@ -4,6 +4,7 @@ import Loadable from "../components/suspense/Loadable";
 import DashboardLayout from "../layout/dashboardLayout/DashboardLayout";
 import MainLayout from "../layout/mainLayout/MainLayout";
 import CourseManagement from '../pages/dashboard/courseManagement';
+import InstructorsList from '../pages/dashboard/instructors/instructorList';
 
 // render - dashboard
 const Home = Loadable(lazy(() => import("../pages/home/index.js")));
@@ -29,6 +30,10 @@ const DashboardRoutes = {
     {
       path: "/dashboard/course-list",
       element: <CourseManagement />,
+    },
+    {
+      path: "/dashboard/instructor-list",
+      element: <InstructorsList />,
     },
   ],
 };
