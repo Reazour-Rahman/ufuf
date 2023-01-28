@@ -4,6 +4,7 @@ import Loadable from "../components/suspense/Loadable";
 import DashboardLayout from "../layout/dashboardLayout/DashboardLayout";
 import MainLayout from "../layout/mainLayout/MainLayout";
 import CourseManagement from '../pages/dashboard/courseManagement';
+import InstructorDetails from '../pages/dashboard/instructors/instructorDetails';
 import InstructorsList from '../pages/dashboard/instructors/instructorList';
 
 // render - dashboard
@@ -34,6 +35,10 @@ const DashboardRoutes = {
     {
       path: "/dashboard/instructor-list",
       element: <InstructorsList />,
+    },
+    {
+      path: "/dashboard/instructor-details",
+      element: <InstructorDetails />,
     },
   ],
 };
