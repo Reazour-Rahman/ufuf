@@ -6,6 +6,8 @@ import MainLayout from "../layout/mainLayout/MainLayout";
 import CourseManagement from '../pages/dashboard/courseManagement';
 import InstructorDetails from '../pages/dashboard/instructors/instructorDetails';
 import InstructorsList from '../pages/dashboard/instructors/instructorList';
+import InstructorOverview from '../pages/dashboard/instructors/instructorOverview';
+import InstructorPayment from '../pages/dashboard/instructors/instructorPayment';
 
 // render - dashboard
 const Home = Loadable(lazy(() => import("../pages/home/index.js")));
@@ -39,6 +41,14 @@ const DashboardRoutes = {
     {
       path: "/dashboard/instructor-details",
       element: <InstructorDetails />,
+    },
+    {
+      path: "/dashboard/instructor-payment",
+      element: <InstructorPayment />,
+    },
+    {
+      path: "/dashboard/instructor-overview",
+      element: <InstructorOverview />,
     },
   ],
 };

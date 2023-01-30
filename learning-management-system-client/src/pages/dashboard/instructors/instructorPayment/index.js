@@ -1,34 +1,31 @@
-import React from "react";
+import React from 'react';
 import { Button, Checkbox, Divider, Tabs } from "antd";
 import { useMemo, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { BsFillEyeFill, BsFillBookFill } from "react-icons/bs";
 import {AiTwotoneLike} from "react-icons/ai";
 import { AndroidOutlined, AppleOutlined } from '@ant-design/icons';
-import PersonalInformation from "./PersonalInformation";
-import OverView from "./OverView";
-import Courses from "./Courses";
-import Review from "./Review";
+import { Typography } from '@mui/material';
+import CompletePayment from './CompletePayment';
+import PendingPayment from './PendingPayment';
 
 
-
-const InstructorDetailsData = () => {
-
-
-  const [tabState, setTabState] = useState(0)
+const InstructorPayment = () => {
+    const [tabState, setTabState] = useState(0)
     const data = [
-        {icons : CgProfile, name:'Personal Information', children: '<PersonalInformation/>'}, {icons : BsFillEyeFill, name:'Overview', children:'<OverView/>'}, {icons : BsFillBookFill, name:'Courses', children:'This is personal information 3'}, {icons : AiTwotoneLike, name:'Review', children:'This is personal information 3'}
+        {icons : CgProfile, name:'Complete Payment', children: '<PersonalInformation/>'}, {icons : BsFillEyeFill, name:'Pending Payment', children:'<OverView/>'}
     ]
-  
-  return (
-    <div
+    return (
+        <div
+      
+    >
+        <Typography variant="h2" sx={{fontFamily:`'Poppins', sans-serif`}}>Instructor Payment</Typography>
+      <div
       style={{
         background: "white",
-        padding: "10px 20px",
+        padding: "5px 20px",
         marginTop: "20px",
-      }}
-    >
-      <>
+      }}>
       <Tabs
     defaultActiveKey={tabState}
     onChange={(e) => setTabState(e)}
@@ -53,13 +50,13 @@ const InstructorDetailsData = () => {
   {
     <div>
       {
-        tabState === 0 ? <PersonalInformation/> : tabState === 1 ? <OverView/> : tabState === 2 ? <Courses/> : <Review/>
+        tabState === 0 ? <CompletePayment/> : tabState === 1 ? <PendingPayment/>: ''
       }
     </div>
   }
-      </>
+      </div>
     </div>
-  );
+    );
 };
 
-export default InstructorDetailsData;
+export default InstructorPayment;

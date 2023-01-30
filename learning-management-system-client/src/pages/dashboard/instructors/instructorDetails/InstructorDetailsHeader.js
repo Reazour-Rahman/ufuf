@@ -4,7 +4,7 @@ import React from 'react';
 const InstructorDetailsHeader = () => {
     return (
         <div>
-             <Typography variant="h2">Instructor Details / <span style={{
+             <Typography variant="h2" sx={{fontFamily:`'Poppins', sans-serif`}}>Instructor Details / <span style={{
                 color:'rebeccapurple'
              }}>Fahad Kibria</span> </Typography>
         </div>
