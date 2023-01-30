@@ -5,12 +5,13 @@ import { CgProfile } from "react-icons/cg";
 import { BsFillEyeFill, BsFillBookFill } from "react-icons/bs";
 import {AiTwotoneLike} from "react-icons/ai";
 import { AndroidOutlined, AppleOutlined } from '@ant-design/icons';
-import { Typography } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 import CompletePayment from './CompletePayment';
 import PendingPayment from './PendingPayment';
 
 
 const InstructorPayment = () => {
+  const theme = useTheme();
     const [tabState, setTabState] = useState(0)
     const data = [
         {icons : CgProfile, name:'Complete Payment', children: '<PersonalInformation/>'}, {icons : BsFillEyeFill, name:'Pending Payment', children:'<OverView/>'}
@@ -19,7 +20,7 @@ const InstructorPayment = () => {
         <div
       
     >
-        <Typography variant="h2" sx={{fontFamily:`'Poppins', sans-serif`}}>Instructor Payment</Typography>
+        <Typography variant="h2" sx={{fontFamily:`'Poppins', sans-serif`, color: theme.palette.common.black,}}>Instructor Payment</Typography>
       <div
       style={{
         background: "white",

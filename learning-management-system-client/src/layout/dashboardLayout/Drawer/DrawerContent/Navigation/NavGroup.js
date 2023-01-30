@@ -23,7 +23,9 @@ const NavGroup = ({ item }) => {
     const navCollapse = item.children?.map((menuItem) => {
         return (
             <Collapse in={open}>
-                <NavItem key={menuItem.id} item={menuItem} level={1} />
+                <NavItem sx={{
+                    fontFamily: `'Poppins', sans-serif`,
+                }} key={menuItem.id} item={menuItem} level={1} />
             </Collapse>
         );
     });
@@ -37,7 +39,9 @@ const NavGroup = ({ item }) => {
                         <ListItemButton onClick={handleTitleClick} timeout="auto" unmountOnExit>
                             <ListItemText
                                 primary={
-                                    <Typography variant="body1" fontSize={'14px'}>
+                                    <Typography sx={{
+                                        fontFamily: `'Poppins', sans-serif`,
+                                    }} variant="body1" fontSize={'14px'}>
                                         {item.title}
                                     </Typography>
                                 }

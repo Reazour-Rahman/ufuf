@@ -25,7 +25,7 @@ const ActiveHandle = ({status, id}) => {
                 />
               </div>
             ) : (
-              <Typography variant="soft">Active</Typography>
+              <Typography variant="soft" sx={{fontFamily: `'Poppins', sans-serif`,}}>Active</Typography>
             )} 
         </div>
     );

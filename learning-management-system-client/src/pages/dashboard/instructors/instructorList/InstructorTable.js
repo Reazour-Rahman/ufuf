@@ -267,7 +267,7 @@ const Tag = () => {
             component="th"
             /* id={labelId} */ scope="row"
             align="left"
-            sx={{ padding: "6px" }}
+            sx={{}}
           >
             <FormGroup>
               <FormControlLabel control={<Checkbox />} />
@@ -290,24 +290,70 @@ const Tag = () => {
               />
             </div>
             <div>
-              <p>fahad kibria</p>
-              <p>fahad@gmail.com</p>
+              <Typography
+                variant="h5"
+                color="text.secondary"
+                component="div"
+                sx={{
+                  fontFamily: `'Poppins', sans-serif`,
+                }}
+              >
+                Fahad Kibria
+              </Typography>
+              <Typography
+                variant="h6"
+                color="text.secondary"
+                component="div"
+                sx={{
+                  fontFamily: `'Poppins', sans-serif`,
+                }}
+              >
+                fahad@gmail.com
+              </Typography>
             </div>
           </TableCell>
-          <TableCell align="left" sx={{ padding: "6px" }}>
+          <TableCell align="left" sx={{  }}>
             {/* <VisibilityOptionMune row={row} isEmailSubmitted={isEmailSubmitted}/> */}
-            p
+            <Typography
+                variant="h6"
+                color="text.secondary"
+                component="div"
+                sx={{
+                  fontFamily: `'Poppins', sans-serif`,
+                }}
+              >
+                Lokking
+              </Typography>
           </TableCell>
-          <TableCell align="left" sx={{ padding: "6px" }}>
-            {row.PayContact}
+          <TableCell align="left" sx={{ }}>
+          <Typography
+                variant="h6"
+                color="text.secondary"
+                component="div"
+                sx={{
+                  fontFamily: `'Poppins', sans-serif`,
+                }}
+              >
+                {row.PayContact}
+              </Typography>
+           
           </TableCell>
-          <TableCell align="left" sx={{ padding: "6px" }}>
+          <TableCell align="left" sx={{ }}>
             <ActiveHandle status={status} id={row.ID} />
           </TableCell>
           <TableCell align="left" sx={{ padding: "6px" }}>
-            dfgdf
+          <Typography
+                variant="h6"
+                color="text.secondary"
+                component="div"
+                sx={{
+                  fontFamily: `'Poppins', sans-serif`,
+                }}
+              >
+                {row.PayContact}
+              </Typography>
           </TableCell>
-          <TableCell align="left" sx={{ padding: "6px" }}>
+          <TableCell align="left" sx={{  }}>
             <Box
               sx={{
                 // display: row.ID === status ? "block" : "none",
@@ -439,6 +485,7 @@ const Tag = () => {
                                   component="div"
                                   sx={{
                                     paddingLeft: " 1rem",
+                                    fontFamily: `'Poppins', sans-serif`,
                                   }}
                                 >
                                   {element.title}

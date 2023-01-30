@@ -52,7 +52,8 @@ function OrderTableHead({ order, orderBy, headCells }) {
                         padding={headCell.disablePadding ? 'none' : 'normal'}
                         sortDirection={orderBy === headCell.id ? order : false}
                         sx={{
-                            py: '12px'
+                            py: '12px',
+                            fontFamily: `'Poppins', sans-serif`,
                         }}
                     >
                         {headCell.label}

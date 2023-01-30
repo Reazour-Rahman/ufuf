@@ -46,6 +46,7 @@ const OptionHandle = ({ open, handleClose, anchorEl }) => {
                 component="div"
                 sx={{
                   paddingLeft: " 1rem",
+                  fontFamily: `'Poppins', sans-serif`,
                 }}
               >
                 {option.title}

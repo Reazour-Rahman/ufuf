@@ -34,6 +34,7 @@ const StyledMenu = styled((props) => (
     borderRadius: 6,
     marginTop: theme.spacing(1),
     minWidth: 180,
+    fontFamily: `'Poppins', sans-serif`,
     color:
       theme.palette.mode === "light"
         ? "rgb(55, 65, 81)"
@@ -80,6 +81,7 @@ const InstructorListHeader = () => {
         variant="h2"
         sx={{
           color: theme.palette.common.black,
+          fontFamily: `'Poppins', sans-serif`,
         }}
       >
         Instructors
@@ -99,18 +101,19 @@ const InstructorListHeader = () => {
             justifyContent: "space-between",
             marginRight: "5px",
           }}
-          className={` shrink w-96 px-3 py-2  text-base font-normal text-slate bg-white bg-clip-padding bg-no-repeat border-2 border-solid border-[#C4C4C4] rounded-[4px]  first-letter:transition ease-in-out flex items-center justify-between `}
+          className={``}
         >
           <input
             style={{
-              fontSize: "20px",
+              fontSize: "18px",
               outline: "none",
               border: "none",
+              fontFamily: `'Poppins', sans-serif`,
             }}
             type="text"
             placeholder="Search Institute"
             autoFocus
-            className="text-xl bg-white  focus:outline-none w-full"
+            className=""
             defaultValue={""}
             onChange={(e) => {}}
           />
@@ -134,6 +137,7 @@ const InstructorListHeader = () => {
             endIcon={<IoIosArrowDown />}
             sx={{
               marginRight: "5px",
+              fontFamily: `'Poppins', sans-serif`,
             }}
           >
             Options
@@ -147,17 +151,25 @@ const InstructorListHeader = () => {
             open={open}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem sx={{
+              fontFamily: `'Poppins', sans-serif`,
+            }} onClick={handleClose} disableRipple>
               Edit
             </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem sx={{
+              fontFamily: `'Poppins', sans-serif`,
+            }} onClick={handleClose} disableRipple>
               Duplicate
             </MenuItem>
             <Divider sx={{ my: 0.5 }} />
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem sx={{
+              fontFamily: `'Poppins', sans-serif`,
+            }} onClick={handleClose} disableRipple>
               Archive
             </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem sx={{
+              fontFamily: `'Poppins', sans-serif`,
+            }} onClick={handleClose} disableRipple>
               More
             </MenuItem>
           </StyledMenu>
