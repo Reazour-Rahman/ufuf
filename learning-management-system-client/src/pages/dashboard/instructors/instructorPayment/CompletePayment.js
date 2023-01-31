@@ -411,14 +411,14 @@ const Tag = () => {
                       <div
                         style={{
                           position: "absolute",
-                          left: -70,
+                          left: -80,
 
                           transformOrigin: "top left",
                           background: "white",
                           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
                           padding: "10px 20px",
                           borderRadius:'5px',
-                          width:'150px',
+                          width:'175px',
                         }}
                       >
                         <div>
