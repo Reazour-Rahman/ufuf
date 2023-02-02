@@ -53,7 +53,10 @@ const StyledMenu = styled((props) => (
   }));
   
   const FlexHandle = {
-    display: "flex",
+    display: {
+      md: "flex",
+      sm: "block",
+    },
     alignItems: "center",
     justifyContent: "space-between",
   };
@@ -75,7 +78,10 @@ const theme = useTheme();
         Instructor Overview
         </Typography>
 
-        <Box sx={{ ...FlexHandle }}>
+        <Box sx={{ ...FlexHandle , marginTop:{
+                      md: "0px",
+                      sm: "5px",
+                    }}}>
           <div>
             <Button
               id="demo-customized-button"

@@ -9,6 +9,7 @@ import PersonalInformation from "./PersonalInformation";
 import OverView from "./OverView";
 import Courses from "./Courses";
 import Review from "./Review";
+import { Typography } from "@mui/material";
 
 
 
@@ -42,7 +43,10 @@ const InstructorDetailsData = () => {
             <item.icons style={{
               fontSize:'20px'
             }}/>
-            <p style={{marginLeft:'10px', fontFamily:`'Poppins', sans-serif`, fontSize:'20px'}}>{item.name}</p>
+            <Typography variant="soft" sx={{marginLeft:'10px', fontFamily:`'Poppins', sans-serif`, fontSize:'20px',display:{
+            md: "block",
+            sm: "none",
+          }}}>{item.name}</Typography>
           </div>
         ),
         key: i,

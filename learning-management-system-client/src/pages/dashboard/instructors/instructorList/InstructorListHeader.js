@@ -73,7 +73,11 @@ const InstructorListHeader = () => {
   return (
     <Box
       sx={{
-        display: "flex",
+        display: {
+          md: "flex",
+          sm: "block",
+        },
+        margin: "5px",
         justifyContent: "space-between",
       }}
     >
@@ -88,7 +92,11 @@ const InstructorListHeader = () => {
       </Typography>
       <Box
         sx={{
-          display: "flex",
+          display: {
+            md: "flex",
+            sm: "block",
+          },
+          margin: "5px",
         }}
       >
         <Box
@@ -136,7 +144,11 @@ const InstructorListHeader = () => {
             onClick={handleClick}
             endIcon={<IoIosArrowDown />}
             sx={{
-              marginRight: "5px",
+              marginRight:  {
+                md: "5px",
+                sm: "0px",
+              },
+              marginTop: "5px",
               fontFamily: `'Poppins', sans-serif`,
             }}
           >
@@ -151,25 +163,41 @@ const InstructorListHeader = () => {
             open={open}
             onClose={handleClose}
           >
-            <MenuItem sx={{
-              fontFamily: `'Poppins', sans-serif`,
-            }} onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                fontFamily: `'Poppins', sans-serif`,
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               Edit
             </MenuItem>
-            <MenuItem sx={{
-              fontFamily: `'Poppins', sans-serif`,
-            }} onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                fontFamily: `'Poppins', sans-serif`,
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               Duplicate
             </MenuItem>
             <Divider sx={{ my: 0.5 }} />
-            <MenuItem sx={{
-              fontFamily: `'Poppins', sans-serif`,
-            }} onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                fontFamily: `'Poppins', sans-serif`,
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               Archive
             </MenuItem>
-            <MenuItem sx={{
-              fontFamily: `'Poppins', sans-serif`,
-            }} onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                fontFamily: `'Poppins', sans-serif`,
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               More
             </MenuItem>
           </StyledMenu>
@@ -180,6 +208,7 @@ const InstructorListHeader = () => {
             variant="contained"
             sx={{
               display: "flex",
+              marginTop: "5px",
             }}
           >
             <AiOutlinePlus />

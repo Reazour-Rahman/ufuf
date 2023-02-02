@@ -55,7 +55,10 @@ const StyledMenu = styled((props) => (
 }));
 
 const FlexHandle = {
-  display: "flex",
+  display: {
+    md: "flex",
+    sm: "block",
+  },
   alignItems: "center",
   justifyContent: "space-between",
 };
@@ -77,7 +80,10 @@ const OverView = () => {
           Profile Overview
         </Typography>
 
-        <Box sx={{ ...FlexHandle }}>
+        <Box sx={{ ...FlexHandle, marginTop:{
+                      md: "0px",
+                      sm: "5px",
+                    } }}>
           <div>
             <Button
               id="demo-customized-button"
@@ -91,6 +97,7 @@ const OverView = () => {
                 <IoIosArrowDown
                   style={{
                     fontSize: "20px",
+                    
                   }}
                 />
               }
