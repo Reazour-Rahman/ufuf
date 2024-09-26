@@ -1,7 +1,7 @@
 import { Button, Typography, useTheme } from "@mui/material";
 import React from "react";
 
-const PinkButton = ({ children }) => {
+const PinkButton = ({ children, wdt }) => {
   const theme = useTheme();
 
   /* Style */
@@ -12,8 +12,11 @@ const PinkButton = ({ children }) => {
     },
     color: "white",
     padding: "12px 24px",
-    borderRadius:"15px"
+    borderRadius:"15px",
+    width: wdt === undefined ? "auto" : wdt,
+    boxShadow: 1
   };
+  console.log(wdt);
 
   return (
     <Button sx={{ ...buttonStyle }}>

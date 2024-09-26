@@ -1,117 +1,10 @@
 import React from "react";
 import { Grid, Box, Typography, useTheme, Rating } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { PlayCircleOutlined } from "@ant-design/icons";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import { GrLocation } from "react-icons/gr";
-import { FaBook, FaComment } from "react-icons/fa";
-import { BsStopwatch } from "react-icons/bs";
-import { FaShare } from "react-icons/fa";
-import { AiOutlineHeart } from "react-icons/ai";
-
-import CardMedia from "@mui/material/CardMedia";
-
-const BannerContainerStyle = styled("section")(({ theme }) => ({
-  backgroundImage:
-    'url("https://20093980.fs1.hubspotusercontent-na1.net/hubfs/20093980/raw_assets/public/saasweb/images/icons/banner-shape-1.jpg")',
-  position: "relative",
-
-  backgroundColor: "#320fa1",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  overflow: "hidden",
-}));
-const BannerPadding = {
-  padding: {
-    md: "185px 0 0px",
-    sm: "145px 0 0px",
-    xs: "130px 0 0px",
-  },
-};
-const LayerOuter = styled("div")(({ theme }) => ({
-  position: "absolute",
-  right: "0",
-  top: "0",
-  bottom: "-70px",
-  width: "50%",
-}));
-const LayerImage = styled("div")(({ theme }) => ({
-  position: "absolute",
-  left: "0",
-  top: "100px",
-  width: "1057px",
-  height: "958px",
-  backgroundImage:
-    "url(https://f.hubspotusercontent30.net/hubfs/20093980/saasweb/big-shape-10.png)",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "bottom center",
-  display: "initial",
-}));
-const AutoContainer = styled("div")(({ theme }) => ({
-  position: "static",
-  maxWidth: "90%",
-  width: "1280px",
-  margin: "0 auto",
-}));
-const H1 = styled("h1")(({ theme }) => ({
-  color: "white",
-  marginBottom: "28px",
-  fontSize: "45px",
-  lineHeight: "58px",
-}));
-const PlayIcon = {
-  padding: "40px",
-  textAlign: "center",
-  fontSize: "24px",
-  color: "#fff",
-  backgroundColor: "#e654bd",
-  boxShadow: "0px 11px 21.25px 3.75px rgb(45 5 156 / 65%)",
-  borderRadius: "50%",
-};
-const Lay = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  // justifyContent: 'space-between',
-  gap: "10px",
-  textDecoration: "underline",
-  color: "white",
-  marginTop: "38px",
-}));
-const Small = styled("small")(({ theme }) => ({
-  color: theme.palette.common.white,
-}));
-
-const mystery = {
-  display: {
-    md: "block",
-    sm: "none",
-    xs: "none",
-  },
-};
-const mysteryActive = {
-  display: {
-    md: "none",
-    sm: "block",
-    xs: "block",
-  },
-};
-
-const CardImage = {
-  zIndex: "500",
-  position: "absolute",
-  width: "470px",
-  ...mystery,
-};
-const CardImageMobile = {
-  width: "70%",
-  ...mysteryActive,
-};
 
 //course card style start
 
-const CliendImage = {
+const ClientImage = {
   width: "60px",
   height: "60px",
   borderRadius: "100%",
@@ -132,19 +25,21 @@ const DescriptionStyle = {
   color: "rgba(20, 33, 43, 0.7)",
 };
 
-const CardContainerStyle = styled("section")(({ theme }) => ({
+const CardContainerStyle = {
   width: {
     lg: "570px",
-    md: "500px",
+    md: "100%",
     sm: "100%",
   },
-  // boxShadow: "0px 4px 34px rgba(0, 0, 0, 0.07)",
-  // margin: "0 auto",
   minHeight: "300px",
   borderRadius: "8px",
   background: "#FFFFFF",
-  padding: "40px",
-}));
+  padding: {
+    md: "40px",
+    sm: "10px",
+    xs: "10px",
+  },
+};
 
 const LineThroughStyle = styled("section")(({ theme }) => ({
   textDecorationLine: "line-through",
@@ -154,10 +49,26 @@ const CardDataContainerStyle = styled("section")(({ theme }) => ({
   padding: "0px 22px",
 }));
 
-const FlexHandle = styled("section")(({ theme }) => ({
-  display: "flex",
+const FlexHandle = {
+  display: {
+    md: "flex",
+    sm: "block",
+    xs: "block",
+  },
   alignItems: "center",
-}));
+};
+
+const CardGaping = {
+  margin: {
+    md: "0px 10px",
+    sm: "0px 5px",
+    xs: "0px 5px",
+  },
+};
+
+const DescriptionStyleGaping = {
+  marginTop: "20px",
+};
 
 //course card style finished
 
@@ -167,57 +78,59 @@ const SliderCard = () => {
     <>
       <div
         style={{
-          margin: "0px 10px",
+          ...CardGaping,
         }}
       >
-        <CardContainerStyle>
+        <Box
+          sx={{
+            ...CardContainerStyle,
+          }}
+        >
           {" "}
-          <FlexHandle
+          <Box
             sx={{
+              ...FlexHandle,
               justifyContent: "space-between",
             }}
           >
-            <FlexHandle>
+            <Box
+              sx={{
+                ...FlexHandle,
+              }}
+            >
               <img
                 src={
                   "https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
                 }
                 className=""
-                style={CliendImage}
+                style={ClientImage}
                 alt=""
               />
 
               <div>
                 <Typography sx={ClientName} variant="h3">
-                  Trending Course
+                  ফাহাদ কিবরিয়া
                 </Typography>
                 <Typography sx={ClientProfession} variant="h6">
-                  Ui/Ux Designer
+                  ওয়েব ডেভেলপার
                 </Typography>
               </div>
-            </FlexHandle>
+            </Box>
 
-            <Rating
-              className={`mr-2`}
-              name="read-only"
-              value={5}
-              size="small"
-              readOnly
-            />
-          </FlexHandle>
+            <Rating name="read-only" value={5} size="small" readOnly />
+          </Box>
           <Box
             sx={{
-              marginTop: "20px",
+              ...DescriptionStyleGaping,
             }}
           >
             <Typography variant="soft" sx={DescriptionStyle}>
-              Mehedii Hassan Ui/Ux Designer The other hand we denounce with
-              righteou indg ation men who are so beguiled and demoraliz ed by
-              the of the mo ment.Dislike men who are so beguiled and dems ed by
-              the charms of pleas ure of the moment. Lorem
+              অন্য দিকে আমরা নিন্দা জানাই ন্যায়পরায়ণ ব্যক্তিরা যারা এত
+              প্রতারিত এবং মনোবলহীন সেই সময়ের। অপছন্দের পুরুষদের যারা এত
+              প্রতারিত এবং তাদের দ্বারা প্রভাবিত মুহূর্ত আনন্দের charms. লরেম
             </Typography>
           </Box>
-        </CardContainerStyle>
+        </Box>
       </div>
     </>
   );

@@ -6,7 +6,8 @@ import { alpha } from '@mui/material/styles';
 const CustomShadows = (theme) => ({
     button: `0 2px #0000000b`,
     text: `0 -1px 0 rgb(0 0 0 / 12%)`,
-    z1: `0px 2px 8px ${alpha(theme.palette.grey[900], 0.15)}`
+    z1: `0px 2px 8px ${alpha(theme.palette.grey[900], 0.15)}`,
+    border: 'rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px',
 });
 
 export default CustomShadows;
